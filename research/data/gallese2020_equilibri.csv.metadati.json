@@ -1,0 +1,40 @@
+{
+ "campi_del_mandato": {
+  "environmental_conditions": "Experimental temperature range per condition (18-31 degC)",
+  "instrument": "AER PLUS (Algade) calibrated at the INGV radon chamber for the absolute-humidity effect; RAD7 (Durridge) in Sniff mode",
+  "licence": "CC BY-NC-ND 3.0 (verified on the PDF, p.71)",
+  "missing_values": "Rn-220 is 'bdl' in three of the six conditions, as published.",
+  "sampling_frequency": "Continuous to equilibrium; equilibrium values tabulated",
+  "site": "Scale model room built of Tufo di Gallese blocks: 62x50x35 cm internal, volume about 0.110 m3, exhaling wall surface 0.78 m2",
+  "soil_properties": {
+   "motivo": "no soil: the source is the wall material",
+   "stato": "non applicabile"
+  },
+  "split": "Validation of the indoor source term, with a declared limit: the sealed configurations sit a factor about 2 above the prediction from the published E, because sealing the outer face redirects the outgoing flux inwards. Under the 2E scenario the discrepancy is -4.3% on test 2.",
+  "timestamp": "Lucchetti et al. 2020, six experimental conditions",
+  "units": "Concentration Bq/m3; temperature degC"
+ },
+ "colonne": [
+  "experiment",
+  "condition_description",
+  "Rn222_eq_Bq_m3",
+  "Rn222_unc",
+  "Rn220_eq_Bq_m3",
+  "Rn220_unc",
+  "T_min_degC",
+  "T_max_degC"
+ ],
+ "file": "gallese2020_equilibri.csv",
+ "file_del_gruppo": [
+  "gallese2020_equilibri.csv"
+ ],
+ "fonte_della_provenienza": "radon_x.data_manifest.MANIFEST",
+ "generato_da": "tools/genera_metadati_dati.py",
+ "impronta_sha256": "ba1b459d08db8b95",
+ "n_righe": 6,
+ "note": "Test 1 (bare pervious walls) and test 5b are not comparable to a sealed-wall prediction and are used only for the leakage estimate.",
+ "provenienza_altrove": "",
+ "righe_di_testa_saltate": 21,
+ "ruolo": "validazione",
+ "schema_version": "1.0"
+}

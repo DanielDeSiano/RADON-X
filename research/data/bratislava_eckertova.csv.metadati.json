@@ -1,0 +1,36 @@
+{
+ "campi_del_mandato": {
+  "environmental_conditions": "Soil temperature 1-27 degC at 30 cm. Volumetric moisture measured hourly but published only as a figure.",
+  "instrument": "Automatic accumulation chamber to ISO 11665-7, two 6-hour cycles per day; HPGe gamma spectrometry in an underground laboratory for Ra-226",
+  "licence": "SSRN open preprint; journal version DOI to be reconfirmed on the publisher page (Crossref gives 10.1016/j.jenvrad.2026.107958)",
+  "missing_values": "Field moisture is the one missing input: recovered as a window Sw 0.24-0.53 by inverting the published diffusion length.",
+  "sampling_frequency": "Two 6-hour accumulation cycles per day",
+  "site": "Bratislava, FMPI Comenius University campus, sandy-silt ranker soil",
+  "soil_properties": "Ra-226 28.0+-0.3, Ra-228 25.9+-0.5 Bq/kg; total porosity 0.459; dry bulk density 1430 kg/m3; texture published",
+  "split": "Field validation. No row enters calibration.",
+  "timestamp": "October 2020 to June 2024, almost four years continuous",
+  "units": "Ra-226 Bq/kg; flux mBq/m2/s; porosity and saturation dimensionless; density kg/m3; temperature degC"
+ },
+ "colonne": [
+  "quantity",
+  "value",
+  "uncertainty",
+  "unit",
+  "value_type",
+  "source_detail",
+  "notes"
+ ],
+ "file": "bratislava_eckertova.csv",
+ "file_del_gruppo": [
+  "bratislava_eckertova.csv"
+ ],
+ "fonte_della_provenienza": "radon_x.data_manifest.MANIFEST",
+ "generato_da": "tools/genera_metadati_dati.py",
+ "impronta_sha256": "b00ffb6c2f42781d",
+ "n_righe": 31,
+ "note": "Independent flux at the same campus from Holy et al. 2016 (15.0+-1.8 mBq/m2/s, summer, chamber) is a cross-check but is a summer value and the authors warn summer rates run about twice the annual mean.",
+ "provenienza_altrove": "",
+ "righe_di_testa_saltate": 35,
+ "ruolo": "validazione",
+ "schema_version": "1.0"
+}

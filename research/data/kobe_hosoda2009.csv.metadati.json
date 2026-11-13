@@ -1,0 +1,44 @@
+{
+ "campi_del_mandato": {
+  "environmental_conditions": "Water saturation per date; season declared",
+  "instrument": "Simultaneous radon and thoron exhalation measurement; soil parameters in the paper's tables",
+  "licence": "J-STAGE, free access",
+  "missing_values": "Th-232 not published, so no thoron validation is possible. The row-to-date pairing is not explicit in the source: the comparison stays per point.",
+  "sampling_frequency": "One campaign per season per point",
+  "site": "Kobe, Japan, Mount Rokko weathered granite, seven measurement points",
+  "soil_properties": "Dry and grain density, porosity, Ra-226 and water saturation at each date; emanation measured against moisture",
+  "split": "Validation restricted to points 1 and 2 (undisturbed, off campus). Points 3, 5, 6, 7 are exploratory only: campus ground, anthropogenic disturbance. The per-date file is exploratory only.",
+  "timestamp": "May, August, November 2007 and January 2008 (four seasons)",
+  "units": "Ra-226 Bq/kg; density kg/m3 and g/cm3; porosity and saturation dimensionless; flux mBq/m2/s"
+ },
+ "colonne": [
+  "point_id",
+  "rho_dry_kg_m3",
+  "rho_dry_sd",
+  "rho_grain_g_cm3",
+  "porosity",
+  "porosity_sd",
+  "Ra226_Bq_kg",
+  "Ra226_sd",
+  "n_dates_with_parameters",
+  "site_condition",
+  "E_Rn_measured_mBq_m2_s",
+  "E_Rn_measured_sd",
+  "E_Tn_measured_mBq_m2_s",
+  "Tn_over_Rn_measured"
+ ],
+ "file": "kobe_hosoda2009.csv",
+ "file_del_gruppo": [
+  "kobe_hosoda2009.csv",
+  "kobe_hosoda2009_per_data.csv"
+ ],
+ "fonte_della_provenienza": "radon_x.data_manifest.MANIFEST",
+ "generato_da": "tools/genera_metadati_dati.py",
+ "impronta_sha256": "d8fe3affd09eda34",
+ "n_righe": 6,
+ "note": "",
+ "provenienza_altrove": "",
+ "righe_di_testa_saltate": 46,
+ "ruolo": "validazione",
+ "schema_version": "1.0"
+}

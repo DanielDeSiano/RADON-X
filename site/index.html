@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f3efe6" />
+    <meta name="description" content="Explore Daniel De Siano’s radon transport model, research and datasets from Ischia." />
+    <title>RADON-X — Radon research from Ischia</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="/radon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" role="img"><path d="M16 3a13 13 0 1 0 13 13A13 13 0 0 0 16 3Zm0 4a9 9 0 0 1 8.55 6.2h-3.4A5.8 5.8 0 0 0 16 10.2a5.8 5.8 0 0 0-5.15 3H7.45A9 9 0 0 1 16 7Zm0 18a9 9 0 0 1-8.55-6.2h3.4a5.8 5.8 0 0 0 10.3 0h3.4A9 9 0 0 1 16 25Zm0-5.6a3.4 3.4 0 1 1 3.4-3.4 3.4 3.4 0 0 1-3.4 3.4Z" /></svg>
+        </div>
+        <div class="brand-copy">
+          <div class="eyebrow">scientific workspace</div>
+          <h1>RADON-X</h1>
+          <p>Research from Ischia</p>
+        </div>
+        <nav class="side-nav" aria-label="Primary">
+          <a class="nav-item" data-page="project" href="/">Project</a>
+          <a class="nav-item" data-page="lab" href="/lab/">Laboratory</a>
+          <a class="nav-item" data-page="daniel" href="/daniel/">Daniel De Siano</a>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <!-- page:lab -->
+        <header class="topbar">
+          <div>
+            <h2 class="page-title">Simulation laboratory</h2>
+            <p class="topbar-caption">Change a parameter, run the model and compare the results.</p>
+          </div>
+          <div class="topbar-actions">
+            <button class="ghost-button" id="resetButton" type="button">Reset example</button>
+          </div>
+        </header>
+        <!-- endpage -->
+
+        <!-- page:project -->
+        <section class="hero" id="overview">
+          <div class="hero-copy">
+            <div class="section-kicker">Volcanic soils · Ischia, Italy</div>
+            <h2>Radon beneath<br />the surface</h2>
+            <p>Explore how radon moves through volcanic soil, and see what changes when you alter the model.</p>
+            <a class="hero-link" href="/lab/">Open simulator <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="geology">
+            <canvas id="geologyCanvas" width="960" height="680" role="img" aria-label="Illustration of radon particles moving upward through layered volcanic soil"></canvas>
+            <figcaption><span>Volcanic soil cross-section · Illustration</span><button id="motionControl" type="button">Pause</button></figcaption>
+          </figure>
+        </section>
+        <section class="research-intro">
+          <h2>From volcanic soil to a testable model</h2>
+          <div><p>Daniel De Siano developed RADON-X to investigate how radon moves through volcanic soil. The simulator combines radon production, radioactive decay and diffusion through a soil column. An optional indoor compartment estimates how the simulated soil source can affect indoor concentration.</p>
+          <p>The Ischia preset provides an exploratory starting point. The archive documents the origin and intended use of the datasets included with the project.</p>
+          <a href="/lab/#datasets">Explore the data archive ↗</a></div>
+        </section>
+        <!-- endpage -->
+
+        <!-- page:lab -->
+        <section class="dashboard-grid" aria-label="Simulation overview">
+          <div class="control-panel panel" id="simulation">
+            <div class="panel-heading">
+              <div><h3>Simulation controls</h3><p id="siteName">Ischia exploratory site</p></div>
+            </div>
+            <form id="simulationForm">
+              <div class="field-group">
+                <label for="ra226">Radium-226 <span>Bq/kg</span></label>
+                <input id="ra226" name="ra226" type="number" step="0.1" min="0" value="185" />
+              </div>
+              <div class="field-group">
+                <label for="emanation">Emanation fraction <span>0–1</span></label>
+                <input id="emanation" name="emanation" type="number" step="0.01" min="0" max="1" value="0.31" />
+              </div>
+              <div class="two-col">
+                <div class="field-group"><label for="porosity">Porosity <span>0–1</span></label><input id="porosity" type="number" step="0.01" min="0.01" max="0.99" value="0.42" /></div>
+                <div class="field-group"><label for="saturation">Water saturation <span>0–1</span></label><input id="saturation" type="number" step="0.01" min="0" max="0.99" value="0.11" /></div>
+              </div>
+              <div class="two-col">
+                <div class="field-group"><label for="depth">Column depth <span>m</span></label><input id="depth" type="number" step="0.1" min="0.1" value="3" /></div>
+                <div class="field-group"><label for="cells">Grid cells <span>3–240</span></label><input id="cells" type="number" step="1" min="3" max="240" value="30" /></div>
+              </div>
+              <div class="two-col">
+                <div class="field-group"><label for="duration">Duration <span>days</span></label><input id="duration" type="number" step="0.5" min="0.5" max="31" value="6" /></div>
+                <div class="field-group"><label for="step">Output step <span>seconds</span></label><input id="step" type="number" step="60" min="60" value="3600" /></div>
+              </div>
+              <div class="field-group select-field"><label for="boundary">Bottom boundary</label><select id="boundary"><option value="sealed">Sealed / zero flux</option><option value="half_space">Equilibrium concentration</option></select></div>
+              <label class="toggle-row"><input id="computeIndoor" type="checkbox" checked /><span class="toggle"></span><span>Compute indoor estimate</span></label>
+              <button class="primary-button" type="submit"><span>Run simulation</span><span class="button-arrow">→</span></button>
+              <p id="runError" class="form-error" role="alert"></p>
+              <p class="form-note">The scientific engine loads on the first run. Calculations take place in your browser.</p>
+            </form>
+          </div>
+
+          <div class="results-area">
+            <div class="metric-row">
+              <article class="metric-card panel accent-blue"><div class="metric-label">SURFACE FLUX</div><div class="metric-value" id="surfaceFlux">—</div><div class="metric-unit">Bq m<sup>−2</sup> s<sup>−1</sup></div><div class="metric-foot">steady-state output</div></article>
+              <article class="metric-card panel accent-amber"><div class="metric-label">SOIL MEAN</div><div class="metric-value" id="soilMean">—</div><div class="metric-unit">Bq m<sup>−3</sup></div><div class="metric-foot">averaging window</div></article>
+              <article class="metric-card panel accent-mint"><div class="metric-label">INDOOR ESTIMATE</div><div class="metric-value" id="indoorValue">—</div><div class="metric-unit">Bq m<sup>−3</sup></div><div class="metric-foot">effective series</div></article>
+              <article class="metric-card panel accent-red"><div class="metric-label">BALANCE RESIDUAL</div><div class="metric-value" id="balanceValue">—</div><div class="metric-unit">Bq m<sup>−2</sup> s<sup>−1</sup></div><div class="metric-foot">numerical diagnostic</div></article>
+            </div>
+
+            <article class="chart-card panel">
+              <div class="panel-heading chart-heading"><div><div class="section-kicker">02 / DYNAMICS</div><h3>Surface flux over time</h3></div><div class="chart-legend"><span class="legend-line"></span><span>core output</span></div></div>
+              <div class="chart-wrap"><svg id="fluxChart" viewBox="0 0 900 300" role="img" aria-label="Surface flux over simulation time"></svg></div>
+              <div class="chart-footer"><span id="fluxRange">Awaiting a run</span><span id="runTime">—</span></div>
+            </article>
+            <article class="panel comparison">
+              <h3>Compare scenarios</h3>
+              <p id="comparisonStatus" aria-live="polite">Run the model, save the result as a baseline, then change one input and run again.</p>
+              <button id="saveBaseline" class="ghost-button" type="button" disabled>Save current as baseline</button>
+              <div class="comparison-table"><table id="comparisonTable" hidden>
+                <thead><tr><th scope="col">Metric</th><th scope="col">Baseline</th><th scope="col">Current</th><th scope="col">Change</th></tr></thead>
+                <tbody id="comparisonRows"></tbody>
+              </table></div>
+            </article>
+
+            <div class="bottom-grid">
+              <article class="insight-card panel"><div class="section-kicker">MODEL READOUT</div><h3 id="readoutTitle">Ready for a run</h3><p id="readoutText">Set the physical parameters on the left, then run the deterministic core. The readout will summarise the result without turning it into a medical claim.</p><div class="readout-rule"></div><div class="readout-key"><span class="key-dot"></span><span>Interpretation is model-based and should be validated against measurements.</span></div></article>
+              <article class="warnings-card panel"><div class="panel-heading"><div><div class="section-kicker">DIAGNOSTICS</div><h3>Warnings & checks</h3></div><span class="check-icon" id="checkIcon">✓</span></div><ul id="warningsList"><li class="empty-state">No warnings. Run a simulation to populate diagnostics.</li></ul></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="profile-section panel" id="profile">
+          <div class="panel-heading"><div><div class="section-kicker">03 / COLUMN INSPECTOR</div><h3>Radon concentration by depth</h3></div><div class="profile-note">Mid-cell values · <span id="profileCount">0</span> cells</div></div>
+          <div class="profile-layout"><div class="profile-chart-wrap"><svg id="profileChart" viewBox="0 0 760 260" role="img" aria-label="Radon concentration by soil depth"></svg></div><div class="profile-copy"><div class="mini-stat"><span>Reference depth</span><strong id="referenceDepth">—</strong></div><div class="mini-stat"><span>Diffusion length</span><strong id="diffusionLength">—</strong></div><div class="mini-stat"><span>Max Fourier number</span><strong id="fourierNumber">—</strong></div><p>The profile is emitted by the same solver used for the headline metrics. It is an inspection surface, not a decorative illustration.</p></div></div>
+        </section>
+
+        <section class="model-section panel" id="model">
+          <div class="panel-heading"><div><div class="section-kicker">04 / MODEL NOTES</div><h3>What this local interface does</h3></div><span class="tag">TRANSPARENT BY DESIGN</span></div>
+          <div class="notes-grid"><div><h4>Physics first</h4><p>The deterministic diffusive branch remains the source of truth. The interface exposes inputs, outputs and diagnostics without replacing the student’s equations.</p></div><div><h4>Safe boundaries</h4><p>Every simulation is validated as a typed <code>ProjectConfig</code>. Interactive limits keep local runs responsive and prevent accidental oversized jobs.</p></div><div><h4>Next research layer</h4><p>The next step can add parameter estimation, uncertainty and PINN comparison while preserving this baseline as the reproducible control.</p></div></div>
+        </section>
+        <section class="archive" id="datasets">
+          <h2>Data archive</h2>
+          <p>Reference tables, field series and accompanying metadata from the research project.</p>
+          <label for="datasetFilter">Filter files</label>
+          <input id="datasetFilter" type="search" placeholder="Search by file name" />
+          <p id="datasetStatus" role="status"></p>
+          <ul id="datasetList"></ul>
+        </section>
+        <!-- endpage -->
+        <!-- page:daniel -->
+        <section class="author" id="daniel">
+          <div><div class="section-kicker">Project author</div><h2>Daniel<br />De Siano</h2><p>Student researcher at Liceo Giorgio Buchner, Ischia.</p></div>
+          <dl>
+            <dt>Computational physics</dt><dd>Author of the Radon and Bradyseism transport model. Works in Python and C++ and represented Italy at the International Young Physicists’ Tournament, where the team received an Honourable Mention.</dd>
+            <dt>Environmental microbiology</dt><dd>Completed 609 certified traineeship hours with S.I.S. on water sampling, membrane filtration and microbiological analysis.</dd>
+            <dt>Fieldwork and leadership</dt><dd>Volunteers with Civil Protection in Forio and coordinates a household radon campaign. Elected class representative for four consecutive years.</dd>
+            <dt>Science communication</dt><dd>Founded Passionscience.it and writes in English about volcanology, radon physics and chemistry. Native Italian speaker and fluent in English.</dd>
+            <dt>Sport</dt><dd>Played 12 seasons with ASD Ischia Calcio and captained the team in selected matches. Also windsurfs and skis.</dd>
+          </dl>
+          <div class="author-links"><a href="https://github.com/DanielDeSiano/Radon-and-Bradyseism-model">Read Daniel’s research code ↗</a><a href="/lab/">Explore his model in the lab ↗</a></div>
+        </section>
+        <!-- endpage -->
+        <footer class="footer"><span>RADON-X · Ischia</span><span>Browser-based scientific simulator</span></footer>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <!-- page:lab -->
+    <script src="/app.js" defer></script>
+    <!-- endpage -->
+    <!-- page:project -->
+    <script src="/gsap.min.js" defer></script>
+    <script src="/motion.js" defer></script>
+    <!-- endpage -->
+  </body>
+</html>

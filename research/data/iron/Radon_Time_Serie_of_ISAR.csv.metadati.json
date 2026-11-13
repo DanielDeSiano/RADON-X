@@ -1,0 +1,40 @@
+{
+ "campi_del_mandato": {
+  "environmental_conditions": "Temperature and relative humidity of the station, in the paired meteo file",
+  "instrument": "AERC series continuous radon monitors, model per station in the 'Rn Instrument' column",
+  "licence": "CC BY 4.0, verified on figshare and DataCite. Attribution required.",
+  "missing_values": "Four gaps over 24 h in ISAR, max 5.1 days; ISCA has stops of 265 and 153 days at instrument changes; duplicate rows with Source=tool/website quantified in QC.md, a naive de-duplication is not enough; ISCA has a peak of 391572 Bq/m3 and five rows at exactly 99900, suspected instrument full scale, undocumented.",
+  "sampling_frequency": "Configurable 15-240 min; 4 h in these files. Median step verified in QC.md.",
+  "site": "Island of Ischia, Italy: ISAR indoor (technical room below ground level), ISCA and ISMAR boreholes. The mapping of station codes to place names is DEDUCED from the coordinates of the paper's Table 1, not published.",
+  "soil_properties": {
+   "motivo": "the network publishes no Ra-226, porosity or density for the stations",
+   "stato": "non applicabile"
+  },
+  "split": "Exploratory ONLY, for two reasons that both matter: the boreholes are at well head below 2 m and are not the soil gas at fixed depth the geogenic potential uses, so an indoor/soil ratio computed on these files is NOT comparable with the Nazaroff ratio; and no building metadata (volume, air exchange rate, foundation) exists for the indoor station.",
+  "timestamp": "ISAR and meteo 2018-12-11 to 2021-12-31; ISCA same window but 632 days with data; ISMAR 2019-05-15 to 2019-11-23",
+  "units": "Radon Bq/m3 (raw and humidity-corrected columns); temperature degC; relative humidity percent"
+ },
+ "colonne": [
+  "Date",
+  "Rn (Bq/m^3)",
+  "Rn corrected (Bq/m^3)",
+  "Rn Instrument",
+  "Source"
+ ],
+ "file": "Radon_Time_Serie_of_ISAR.csv",
+ "file_del_gruppo": [
+  "iron/Radon_Time_Serie_of_ISAR.csv",
+  "iron/Radon_Time_Serie_of_ISCA.csv",
+  "iron/Radon_Time_Serie_of_ISMAR.csv",
+  "iron/Meteo_Time_Serie_of_ISAR.csv"
+ ],
+ "fonte_della_provenienza": "radon_x.data_manifest.MANIFEST",
+ "generato_da": "tools/genera_metadati_dati.py",
+ "impronta_sha256": "7d1de4c3f34ac68e",
+ "n_righe": 12465,
+ "note": "First indoor measurements to enter the project. Raw downloads: must not be edited. MD5 recorded in QC.md.",
+ "provenienza_altrove": "data/iron/README.md and data/iron/QC.md",
+ "righe_di_testa_saltate": 0,
+ "ruolo": "solo-esplorativo",
+ "schema_version": "1.0"
+}

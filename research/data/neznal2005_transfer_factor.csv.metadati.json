@@ -1,0 +1,43 @@
+{
+ "campi_del_mandato": {
+  "environmental_conditions": {
+   "motivo": "long-term averages; the paper publishes no weather covariates",
+   "stato": "non applicabile"
+  },
+  "instrument": "Soil: third quartiles of soil-gas radon and permeability per the uniform Czech method (Neznal et al. 2004). Indoor: track detectors, electrets and continuous monitors, declared per row",
+  "licence": "Not declared in the PDF; public document on the author's site",
+  "missing_values": "Every indoor value is CENSORED: a bound or an approximation, carried by the qualifier column, never a point. Horni Slavkov A has no tabulated soil parameters. The project bibliography claimed fifteen houses; the paper tabulates five, and the project report that would hold the rest is not public.",
+  "sampling_frequency": "One value per house and zone, with the averaging period declared per row",
+  "site": "Five real houses in the Czech Republic (Lounovice A and B, Potucky, Horni Slavkov A and B), four of them with soil-gas radon and permeability of the building site",
+  "soil_properties": "cA75 and k75 of the building site; no laboratory soil sample parameters",
+  "split": "Validation of the WIDTH of ring B, not of its central value: four houses at comparable radon potential span more than 2.6 decades of transfer factor, with censoring making that a lower bound. Never a calibration target: N=4 and every value is a bound.",
+  "timestamp": "Measured 2004-2005; source reopened and re-read in full on 2026-08-31 before transcription",
+  "units": "Soil-gas kBq/m3; permeability m2; indoor Bq/m3"
+ },
+ "colonne": [
+  "house",
+  "zone",
+  "soil_cA75_kBq_m3",
+  "k75_m2",
+  "radon_potential",
+  "radon_index",
+  "indoor_bq_m3",
+  "qualifier",
+  "method",
+  "period",
+  "note"
+ ],
+ "file": "neznal2005_transfer_factor.csv",
+ "file_del_gruppo": [
+  "neznal2005_transfer_factor.csv"
+ ],
+ "fonte_della_provenienza": "radon_x.data_manifest.MANIFEST",
+ "generato_da": "tools/genera_metadati_dati.py",
+ "impronta_sha256": "25fe32d37cf1f220",
+ "n_righe": 10,
+ "note": "",
+ "provenienza_altrove": "",
+ "righe_di_testa_saltate": 41,
+ "ruolo": "validazione",
+ "schema_version": "1.0"
+}

@@ -1,0 +1,45 @@
+{
+ "campi_del_mandato": {
+  "environmental_conditions": "Beds seasoned 1-3 months, near dry: residual saturation 0.05 assumed and declared",
+  "instrument": "Certified exhalation over 48 and 44 experiments respectively",
+  "licence": "Green open access (Radiation Measurements 133:106284)",
+  "missing_values": "Emanation has a declared band of a factor 2.8 across sources (0.15 / 0.20 / 0.42): the comparison is presented on the band.",
+  "sampling_frequency": {
+   "motivo": "certified mean over tens of experiments, not a time series",
+   "stato": "non applicabile"
+  },
+  "site": "Two phosphogypsum metrological reference beds, Universidad de Huelva (RB1 6.0 cm, 35 kg; RB2 13.0 cm, 73 kg)",
+  "soil_properties": "Ra-226 451+-7 (RB1) and 420+-8 (RB2) Bq/kg; densities 1080 and 1011 kg/m3; porosity derived from density with the grain density of the 2026 set",
+  "split": "BLOCKED TEST, for the same reason as Santander.",
+  "timestamp": "Gutierrez-Alvarez et al. 2020",
+  "units": "Ra-226 Bq/kg; density kg/m3; thickness cm; flux mBq/m2/s"
+ },
+ "colonne": [
+  "bench_id",
+  "material",
+  "thickness_m",
+  "mass_kg",
+  "Ra226_Bq_kg",
+  "Ra226_unc",
+  "rho_bulk_kg_m3",
+  "water_saturation",
+  "emanation_measured",
+  "emanation_measured_unc",
+  "n_experiments",
+  "E_measured_mBq_m2_s",
+  "E_measured_unc"
+ ],
+ "file": "huelva_banchi_riferimento.csv",
+ "file_del_gruppo": [
+  "huelva_banchi_riferimento.csv"
+ ],
+ "fonte_della_provenienza": "radon_x.data_manifest.MANIFEST",
+ "generato_da": "tools/genera_metadati_dati.py",
+ "impronta_sha256": "f1a148fe38a599bf",
+ "n_righe": 2,
+ "note": "At the measured emanation 0.20 both certified fluxes sit ABOVE their own production ceiling (ratios 1.080 and 1.013), which inverts to emanation 0.2161 and 0.2026, inside the measured band 0.20+-0.04.",
+ "provenienza_altrove": "",
+ "righe_di_testa_saltate": 43,
+ "ruolo": "test-bloccato",
+ "schema_version": "1.0"
+}

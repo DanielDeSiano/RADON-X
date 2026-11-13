@@ -1,0 +1,44 @@
+{
+ "campi_del_mandato": {
+  "environmental_conditions": "Moisture range read off a figure only",
+  "instrument": {
+   "che_cosa_cercare": "chamber type, in the IR477/IR616 government reports",
+   "stato": "fonte da trovare"
+  },
+  "licence": "Australian government reports, reuse with attribution (Commonwealth Creative Commons licence to be verified)",
+  "missing_values": "Emanation, porosity, density all absent: the flux cannot be predicted from first principles here.",
+  "sampling_frequency": {
+   "che_cosa_cercare": "counting time, in the reports",
+   "stato": "fonte da trovare"
+  },
+  "site": "Ranger uranium province, Northern Territory, Australia",
+  "soil_properties": "Emanation, porosity and density NOT measured by this source",
+  "split": "Validation restricted to the RE-R quantity. Everything else exploratory only, for want of inputs.",
+  "timestamp": "Government report series, dates in the reports",
+  "units": "Flux mBq/m2/s; conversion factor dimensionless"
+ },
+ "colonne": [
+  "category",
+  "RE_R",
+  "RE_R_unc_plus",
+  "RE_R_unc_minus",
+  "RE_R_min",
+  "RE_R_max",
+  "source_ref",
+  "value_type",
+  "notes"
+ ],
+ "file": "ranger_fattore_conversione.csv",
+ "file_del_gruppo": [
+  "ranger_fattore_conversione.csv"
+ ],
+ "fonte_della_provenienza": "radon_x.data_manifest.MANIFEST",
+ "generato_da": "tools/genera_metadati_dati.py",
+ "impronta_sha256": "a5744fae73243e50",
+ "n_righe": 8,
+ "note": "",
+ "provenienza_altrove": "",
+ "righe_di_testa_saltate": 41,
+ "ruolo": "validazione",
+ "schema_version": "1.0"
+}

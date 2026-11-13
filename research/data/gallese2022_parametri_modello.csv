@@ -1,0 +1,35 @@
+# Lucchetti C., Galli G., Tuccimei P. (2022) "Indoor/outdoor air exchange
+# affects indoor radon - the use of a scale model room to develop a mitigation
+# strategy", Advances in Geosciences 57:81-88, DOI 10.5194/adgeo-57-81-2022.
+# License (verbatim from p.81): "(c) Author(s) 2022. This work is distributed
+# under the Creative Commons Attribution 4.0 License." (CC BY 4.0)
+# Rows model_*: Table 3 (p.86) "Parameters used in the modelling using the
+# Fick's second law (Eq. 3)". Table 3 quotes NO uncertainties; source_note
+# gives the footnote reference of each value verbatim: (a) Narula et al. (2010),
+# "datum referred to a porous material with a density like that of 'Tufo di
+# Gallese' ignimbrite"; (b) Righi et al. (2006); (c) Lucchetti et al. (2020).
+# Rows geometry_*: chamber geometry from Sect. 2.1 "The scale model-room"
+# (p.82): model room 62 cm x 50 cm x 35 cm (inner length x width x height),
+# built with sixty blocks (15 cm x 10 cm x 5 cm per block) of "Tufo di
+# Gallese" ignimbrite; "Only the walls of the room consisted of ignimbrite
+# stone (surface area of 0.78 m2), whereas the floor and the roof were made
+# from Plexiglas boards"; "The inner volume of the chamber was about 0.110 m3".
+# Volume is quoted by the paper as approximate ("about").
+# Extraction route: the first fetch returned the raw PDF binary (unreadable); PDF
+# downloaded with curl from
+# https://adgeo.copernicus.org/articles/57/81/2022/adgeo-57-81-2022.pdf,
+# text extracted with system python3 + pypdf 6.14.2 (pypdf not in project venv).
+parameter,symbol,value,unit,source_note,provenance
+model_radon_diffusion_coefficient,D,2.54e-6,m2 s-1,"Narula et al. (2010), porous material with density like Tufo di Gallese",Table 3 p.86
+model_radon_emanation_factor,eta,0.65,dimensionless,"Righi et al. (2006)",Table 3 p.86
+model_density,rho,2310,kg m-3,"Lucchetti et al. (2020)",Table 3 p.86
+model_Ra226_specific_activity,a,190,Bq kg-1,"Lucchetti et al. (2020)",Table 3 p.86
+model_Rn222_decay_constant,lambda,2.09794e-6,s-1,,Table 3 p.86
+model_porosity,p,0.43,dimensionless,"Lucchetti et al. (2020)",Table 3 p.86
+geometry_inner_length,L,0.62,m,,Sect. 2.1 p.82 and Fig. 1 caption
+geometry_inner_width,W,0.50,m,,Sect. 2.1 p.82 and Fig. 1 caption
+geometry_inner_height,H,0.35,m,,Sect. 2.1 p.82 and Fig. 1 caption
+geometry_inner_volume,V,0.110,m3,"quoted as ""about 0.110 m3""",Sect. 2.1 p.82
+geometry_exhaling_wall_surface,S,0.78,m2,"ignimbrite walls only; floor and roof are Plexiglas",Sect. 2.1 p.82
+geometry_block_count,n_blocks,60,dimensionless,"sixty blocks of Tufo di Gallese",Sect. 2.1 p.82
+geometry_block_size,block,0.15 x 0.10 x 0.05,m,"15 cm x 10 cm x 5 cm per block",Sect. 2.1 p.82

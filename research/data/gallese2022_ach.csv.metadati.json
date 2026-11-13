@@ -1,0 +1,40 @@
+{
+ "campi_del_mandato": {
+  "environmental_conditions": "Inner cover present or absent, declared per experiment",
+  "instrument": "AER PLUS and RAD7; air flow imposed and measured, ACH computed as flow over volume",
+  "licence": "CC BY 4.0 (verified on the PDF, p.81)",
+  "missing_values": "The absolute baseline concentrations of the 2022 campaign are not tabulated: only the relative reductions. An absolute comparison with these data alone is not possible.",
+  "sampling_frequency": "Continuous to a new equilibrium per experiment",
+  "site": "Same scale model room, twelve ventilation experiments",
+  "soil_properties": {
+   "motivo": "no soil is involved: the radon source is the tuff wall material of the chamber, characterised in gallese2020_materiali.csv",
+   "stato": "non applicabile"
+  },
+  "split": "MIXED, and this is the project's first calibration assignment. Experiment 5 alone was used to estimate the background ACH of the chamber (leakage), n0 = 0.0389 per hour: it is CALIBRATION and must never be quoted as validation. Experiments 1-4 are then pure predictions and are validation. Experiments 6-12 are validation too, and the model FAILS them (z from 11.1 to 24.9): recorded as a falsification, not removed.",
+  "timestamp": "Lucchetti, Galli, Tuccimei 2022",
+  "units": "Air flow L/min; ACH 1/h (positive injection, negative extraction); RIR percent"
+ },
+ "colonne": [
+  "experiment",
+  "group",
+  "inner_cover",
+  "mode",
+  "airflow_L_min",
+  "ACH_h",
+  "RIR_pct",
+  "RIR_unc_pct"
+ ],
+ "file": "gallese2022_ach.csv",
+ "file_del_gruppo": [
+  "gallese2022_ach.csv"
+ ],
+ "fonte_della_provenienza": "radon_x.data_manifest.MANIFEST",
+ "generato_da": "tools/genera_metadati_dati.py",
+ "impronta_sha256": "7fa9fd4c95d368ab",
+ "n_righe": 12,
+ "note": "Assigned 2026-08-06, when the estimate was made. Before that date the project had no dataset in calibration. The reason is in docs/validazione-indoor-gallese.md.",
+ "provenienza_altrove": "",
+ "righe_di_testa_saltate": 25,
+ "ruolo": "calibrazione",
+ "schema_version": "1.0"
+}

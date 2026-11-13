@@ -1,0 +1,43 @@
+# Voltaggio M., Tuccimei P. et al. (2006) "A methodology for assessing the maximum
+# expected radon flux from soils in northern Latium (central Italy)",
+# Environmental Geochemistry and Health 28:541-551.
+# DOI: needs-source
+# Origine dei valori: Tabella 1, pp. 546-547. Trascritti alla lettera dai documenti
+#   Verifica_flussi_v2 e Verifica_flussi_prova1_prova2_v2 (sezione "Fonte dei dati
+#   sperimentali"), che a loro volta dichiarano la trascrizione letterale.
+# Licenza / accesso: articolo su abbonamento Springer. Stato di accesso: closed.
+#   I valori qui riportati sono dati numerici fattuali di tabella, non testo protetto.
+# Sito: Lazio settentrionale (Italia centrale), sei siti su tre litotipi
+#   (vulcanico, epiclastico, unita' fluvio-lacustre Chiani-Tevere).
+# Strumento: non riportato nei documenti di validazione -> needs-source
+#   (il flusso JRn e' misura di campo; g e' misura di laboratorio su campione).
+# Periodo: non riportato nei documenti di validazione -> needs-source.
+# Numeri decimali: nei documenti originali la virgola e' separatore decimale e lo
+#   spazio separatore delle migliaia; qui convertiti in punto decimale e nessun
+#   separatore di migliaia. Nessun valore e' stato ricalcolato o arrotondato.
+#
+# Unita' e tipo di ciascuna colonna:
+#   site_id                    : identificativo di sito come in Tabella 1 [-]           misurato/etichetta
+#   lithology                  : litotipo dichiarato dagli autori [-]                   etichetta
+#   Ra226_Bq_kg                : attivita' specifica di Ra-226 [Bq kg-1]                misurato
+#   g_emanation                : coefficiente di emanazione di laboratorio [-]          misurato
+#   porosity_phi               : porosita' totale [-]                                   misurato
+#   Rs_saturation_at_sampling  : saturazione d'acqua al campionamento [-]               misurato
+#   rho_bulk_kg_m3             : densita' apparente secca [kg m-3]                      DEDOTTO:
+#       i documenti dichiarano rho_bulk = rho_p*(1-phi), quindi questa colonna e'
+#       calcolata dal grano rho_p pubblicato e da phi, non letta direttamente.
+#       rho_p non e' trascritto nei documenti e NON viene ricostruito qui.
+#   J_Rn_measured_Bq_m2_day    : flusso di radon misurato in campo [Bq m-2 d-1]         misurato
+#   J_Rne_estimated_Bq_m2_day  : stima diffusiva degli autori [Bq m-2 d-1]              CALCOLATO DAGLI AUTORI
+#
+# Umidita' di campo contestuale alla misura di flusso: NON pubblicata come serie;
+#   l'unico dato di stato idrico e' Rs al campionamento. Vedi DATASETS.md, "Cosa manca ancora".
+# Le uscite del modello RADON-X presenti nei documenti di validazione NON sono
+#   incluse: sono risultati, non dati.
+site_id,lithology,Ra226_Bq_kg,g_emanation,porosity_phi,Rs_saturation_at_sampling,rho_bulk_kg_m3,J_Rn_measured_Bq_m2_day,J_Rne_estimated_Bq_m2_day
+1,vulcanica,185,0.31,0.42,0.11,1612,10172,33922
+18,vulcanica,99,0.41,0.46,0.16,1393,3733,19680
+8,epiclastica,74,0.17,0.42,0.08,1450,11461,6831
+2,chiani-tevere,49,0.02,0.37,0.06,1682,993,693
+7,chiani-tevere,99,0.06,0.42,0.14,1496,6563,3092
+24,chiani-tevere,86,0.25,0.42,0.30,1717,6157,11562

@@ -1,0 +1,50 @@
+# Hosoda et al. 2007, Fig. 2 p.666 - INDIVIDUAL (unbinned) measurements.
+# Filled dark markers = radon (left axis 0-50 mBq m-2 s-1);
+# open white markers  = thoron (right axis 0-5000 mBq m-2 s-1).
+# Series identity established from legend marker/text pairing (same +2.7..+3.0 pt
+# baseline offset as the unambiguous Fig. 3 legend).
+# NOTE: binning these into the Fig. 6(a) moisture groups reproduces the Fig. 6(a)
+# means (e.g. theta~7.4-7.8 -> mean 13.31 vs 13.2 plotted; theta~11.0-11.4 ->
+# mean 10.73 vs 10.7 plotted).
+# Riferimento completo: Hosoda M., Shimo M., Sugino M., Furukawa M., Fukushi M. (2007)
+#   "Effect of Soil Moisture Content on Radon and Thoron Exhalation",
+#   J. Nucl. Sci. Technol. 44(4):664-672, DOI 10.1080/18811248.2007.9711855.
+#   Stato di accesso: Taylor & Francis, accesso libero su J-STAGE.
+#   Materiale: suolo granitico alterato, Prefettura di Ibaraki, Giappone.
+#   Ra-226 = 57.0 Bq/kg; rho_b = 1730 kg/m3; porosita 0.30; strato 50 mm.
+#   Vedi hosoda2007_moisture_curve.csv per i metadati completi di estrazione.
+moisture_content_pct,E_Rn_mBq_m2_s
+3.02,5.51
+3.02,13.91
+3.22,14.90
+3.33,10.10
+5.68,13.50
+6.15,15.11
+7.43,15.51
+7.63,14.21
+7.76,10.50
+7.82,13.00
+11.02,3.10
+11.33,7.10
+11.33,11.01
+11.38,21.70
+12.59,14.01
+12.69,11.31
+12.73,6.00
+12.82,9.20
+13.86,8.11
+13.94,6.20
+14.06,7.60
+16.61,5.81
+16.72,7.01
+18.24,4.70
+18.55,4.80
+19.88,4.90
+20.03,2.91
+20.15,1.90
+21.28,1.90
+21.32,2.51
+21.75,1.80
+21.95,0.81
+21.98,1.50
+22.68,1.60

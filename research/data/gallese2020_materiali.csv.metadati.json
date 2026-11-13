@@ -1,0 +1,52 @@
+{
+ "campi_del_mandato": {
+  "environmental_conditions": {
+   "motivo": "material properties, not a measurement campaign",
+   "stato": "non applicabile"
+  },
+  "instrument": "Gamma spectrometry for the radionuclides; exhalation measured per unit surface",
+  "licence": "2020 CC BY-NC-ND 3.0; 2022 CC BY 4.0 (both verified verbatim on the PDFs)",
+  "missing_values": "The 2022 model-parameter table publishes no uncertainties: those for density and Ra-226 exist only in the 2020 materials table.",
+  "sampling_frequency": {
+   "motivo": "laboratory table of material properties: it has no site, no sampling instant and no sampling frequency",
+   "stato": "non applicabile"
+  },
+  "site": "Volcanic building materials of Lazio, characterised in the laboratory (Tufo di Gallese, Tufo di Riano, Peperino Grigio, Peperino Rosato)",
+  "soil_properties": "Not soil: building material. Ra-226 190+-3 Bq/kg and porosity 0.43 for Tufo di Gallese, the material of the chamber.",
+  "split": "Input parameters. Not a comparison target.",
+  "timestamp": {
+   "motivo": "laboratory table of material properties: it has no site, no sampling instant and no sampling frequency",
+   "stato": "non applicabile"
+  },
+  "units": "Radionuclides Bq/kg; exhalation Bq/m2/h; porosity dimensionless; diffusivity m2/s; density kg/m3"
+ },
+ "colonne": [
+  "material",
+  "geology",
+  "porosity_pct",
+  "Th232_Bq_kg",
+  "Th232_unc",
+  "Ra226_Bq_kg",
+  "Ra226_unc",
+  "K40_Bq_kg",
+  "K40_unc",
+  "E222_Bq_m2_h",
+  "E222_unc",
+  "E220_Bq_m2_h",
+  "E220_unc"
+ ],
+ "file": "gallese2020_materiali.csv",
+ "file_del_gruppo": [
+  "gallese2020_materiali.csv",
+  "gallese2022_parametri_modello.csv"
+ ],
+ "fonte_della_provenienza": "radon_x.data_manifest.MANIFEST",
+ "generato_da": "tools/genera_metadati_dati.py",
+ "impronta_sha256": "0ff4a9b34280397e",
+ "n_righe": 4,
+ "note": "",
+ "provenienza_altrove": "",
+ "righe_di_testa_saltate": 16,
+ "ruolo": "parametri-di-ingresso",
+ "schema_version": "1.0"
+}

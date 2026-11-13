@@ -1,0 +1,41 @@
+# van der Spoel W.H. (1998), "Radon transport in sand: a laboratory study",
+# tesi di dottorato, TU Eindhoven, DOI 10.6100/IR508320.
+# Il capitolo 8 corrisponde a Health Physics 77(2):163-177 (1999).
+# Licenza / accesso: PDF libero su pure.tue.nl.
+# Origine dei valori: sezione 8.4 della tesi (Eq. 8.3 e ancore di diffusivita');
+#   trascritti nel documento Validazione_Ranger_vdSpoel_v1, appendice A.
+# Materiale: sabbia Ankersmit, granulometria 305 micrometri (sabbia grossa
+#   monogranulare). Porosita' 0.34, temperatura 293 K.
+# Strumento: misure di laboratorio; porosita', densita', tortuosita', Ra,
+#   emanazione ed emanazione in funzione dell'umidita' misurate TUTTE
+#   indipendentemente sullo stesso materiale. E' la caratterizzazione di
+#   laboratorio piu' completa disponibile in letteratura per questo scopo.
+# Periodo: 1998.
+#
+# ATTENZIONE ALL'USO: questa tesi NON pubblica flussi di esalazione tabulati
+#   (misura profili di concentrazione). Il dataset serve a mettere alla prova la
+#   chiusura D(theta), non a validare il flusso.
+#
+# Unita' e tipo di ciascuna colonna:
+#   quantity        : grandezza [-]                                                    etichetta
+#   state           : stato idrico del campione [-]                                    etichetta
+#   water_saturation: saturazione d'acqua [-]                                          misurato
+#   value           : valore [unita' della colonna unit]                               misurato
+#   uncertainty     : incertezza come pubblicata [stessa unita']                       misurato
+#   unit            : unita' di misura
+#   value_type      : misurato | misurato_approssimato
+#   notes           : condizioni e limitazioni
+#
+# Le righe di emanazione descrivono la FORMA della curva secco->plateau. Il valore di
+#   plateau e' riportato nei documenti di validazione come "attorno a 0.25": e'
+#   quindi marcato misurato_approssimato e va riletto sulla tesi prima di essere
+#   citato con quella cifra.
+# Le uscite del modello RADON-X (D calcolato con Rogers & Nielson) non sono incluse:
+#   sono risultati, non dati.
+quantity,state,water_saturation,value,uncertainty,unit,value_type,notes
+diffusion_coefficient,secca,0,2.42e-6,1.1e-7,m2 s-1,misurato,ancora di diffusivita' a secco
+diffusion_coefficient,parzialmente_satura,0.79,1.16e-8,1.0e-10,m2 s-1,misurato,
+diffusion_coefficient,satura,1,1.67e-10,3.0e-12,m2 s-1,misurato,
+emanation_coefficient,secca_assoluta,0,0.13,,-,misurato,estremo secco della curva di emanazione
+emanation_coefficient,theta_0.5_percent,,0.28,,-,misurato,"contenuto d'acqua volumetrico 0.5%; la saturazione corrispondente non e' trascritta -> cella VUOTA"
+emanation_coefficient,plateau,,0.25,,-,misurato_approssimato,"riportato come 'attorno a 0.25'; da rileggere sulla tesi prima della citazione"

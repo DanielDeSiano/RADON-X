@@ -1,0 +1,52 @@
+# Hosoda M. et al. (2009) "Simultaneous measurements of radon and thoron exhalation
+# rates and comparison with values calculated by UNSCEAR equation",
+# Journal of Radiation Research 50(4):333-343, DOI 10.1269/jrr.08121.
+# Licenza / accesso: open access, PDF integrale libero su J-STAGE.
+# Origine dei valori: Tabella 3 del paper (una riga per ogni data di misura con
+#   parametri completi, 24 righe in totale), trascritti alla lettera nel documento
+#   Validazione_Kobe_Santander_Bessines_v1, sezione 2.
+# Sito: Kobe (Giappone), granito alterato del monte Rokko. Stesso studio di
+#   kobe_hosoda2009.csv, che contiene la sintesi per punto e i parametri di suolo.
+# Strumento: vedi kobe_hosoda2009.csv (dettaglio strumentale -> needs-source).
+# Periodo: maggio / agosto / novembre 2007, gennaio 2008.
+#
+# Unita' e tipo di ciascuna colonna:
+#   point_id                     : punto di misura [-]                                etichetta
+#   date_label                   : data della misura [-]                              NON PUBBLICATA in forma
+#       associabile: il paper non esplicita l'abbinamento riga-data. La colonna e'
+#       lasciata VUOTA su tutte le righe. Non viene inventata alcuna data.
+#   water_saturation_m           : saturazione d'acqua alla data [-]                  misurato
+#   emanation_coefficient_f      : coefficiente di emanazione alla data [-]           misurato
+#       (misurato in funzione dell'umidita' e rivalutato dagli autori a ogni data)
+#   E_Rn_calculated_UNSCEAR_mBq_m2_s : flusso calcolato dagli autori con l'equazione
+#       UNSCEAR [mBq m-2 s-1]                                                         CALCOLATO DAGLI AUTORI
+#
+# L'ordine delle righe e' quello del documento di validazione, che a sua volta segue
+#   la Tabella 3. Non ha significato cronologico.
+# Il flusso misurato NON e' ripetuto qui perche' e' una media per punto sulle
+#   stagioni: sta in kobe_hosoda2009.csv.
+point_id,date_label,water_saturation_m,emanation_coefficient_f,E_Rn_calculated_UNSCEAR_mBq_m2_s
+1,,0.259,0.35,11
+1,,0.462,0.36,8
+1,,0.121,0.33,13
+1,,0.172,0.35,8
+2,,0.504,0.33,14
+2,,0.257,0.31,20
+2,,0.147,0.27,22
+2,,0.238,0.31,14
+3,,0.803,0.39,14
+3,,0.612,0.39,33
+3,,0.703,0.39,24
+3,,0.209,0.39,64
+3,,0.523,0.40,46
+3,,0.784,0.38,20
+5,,0.257,0.33,31
+5,,0.230,0.33,32
+6,,0.429,0.30,35
+6,,0.272,0.30,44
+6,,0.173,0.30,51
+6,,0.171,0.30,51
+6,,0.431,0.31,35
+6,,0.427,0.31,35
+7,,0.467,0.35,26
+7,,0.223,0.32,35

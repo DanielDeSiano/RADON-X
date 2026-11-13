@@ -1,0 +1,22 @@
+# Zhuo W., Iida T., Furukawa M. (2006) "Modeling Radon Flux Density from the
+# Earth's Surface", J. Nucl. Sci. Technol. 43(4):479-482,
+# DOI 10.1080/18811248.2006.9711127 (Free access on Taylor & Francis).
+# Table 3 (p.481) "Soil parameters of the 4 seasons in the 10 measured sites"
+# + Table 4 (p.481) "Measured and estimated radon flux densities (mBq m-2 s-1)
+#   for the 4 seasons in the 10 sites"
+# Transcribed VERBATIM. Seasonally averaged measurements, Japan+Korea,
+# April 2003 - April 2004, naturally ventilated accumulator (0.28 h-1).
+# eps0 = radon emanation power for oven-dried soil, at 25 degC.
+# S = fraction of pore space filled with water (saturation).
+# a) Zhuo's footnote: "The data were confirmed as the measuring problems." -> sites A, G, I
+site,Ra226_Bq_kg,rho_b_g_cm3,total_porosity,eps0_at25C,S_avg,S_min,S_max,T_avg_K,T_min_K,T_max_K,J_meas_avg,J_meas_min,J_meas_max,J_Rogers,J_Schery,J_combined,footnote
+A,17.5,1.04,0.57,0.18,0.50,0.41,0.58,282,272,291,18.4,12.6,19.8,13.4,19.3,15.2,a
+B,25.4,1.18,0.53,0.12,0.48,0.41,0.54,283,275,290,11.1,10.6,14.1,16.4,23.3,13.4,
+C,18.0,0.98,0.60,0.14,0.43,0.37,0.48,289,281,296,10.6,8.6,12.7,10.4,15.3,10.7,
+D,25.7,1.63,0.39,0.07,0.63,0.57,0.70,289,280,296,9.1,7.5,11.2,11.6,16.1,7.7,
+E,36.0,1.57,0.41,0.13,0.59,0.49,0.66,290,282,297,28.5,26.8,35.8,37.9,53.0,25.3,
+F,44.1,1.47,0.47,0.07,0.51,0.45,0.59,291,272,291,21.6,17.8,25.3,18.4,25.7,18.5,
+G,25.1,1.14,0.56,0.08,0.46,0.42,0.50,296,290,301,7.7,6.8,8.5,8.5,11.4,9.6,a
+H,83.4,1.42,0.48,0.07,0.49,0.40,0.61,286,275,296,39.9,33.7,42.8,37.2,52.1,33.5,
+I,121,1.49,0.43,0.09,0.58,0.49,0.63,285,275,294,73.2,57.9,89.4,59.3,80.5,62.7,a
+J,37.5,1.19,0.55,0.12,0.49,0.37,0.59,288,280,296,21.7,18.0,24.8,22.5,31.5,20.8,

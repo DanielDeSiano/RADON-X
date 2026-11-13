@@ -1,0 +1,50 @@
+# Gruppo di Ryzhakova, Politecnico di Tomsk (Russia). Sito Lagerny Sad, limo lessico.
+# Fonti:
+#   Ryzhakova N.K., Stavitskaya K., Udalov A., Radiatsionnaya Gigiena 13(2):57-64
+#     (2020), open access. DOI: needs-source.
+#   Ryzhakova N.K., Stavitskaya K., Udalov A., Radiatsionnaya Gigiena 11(2):37-44
+#     (2018), per densita' e porosita' (metodo dell'anello tagliente).
+#     DOI: needs-source.
+#   Stavitskaya et al., AIP Conf. Proc. 2101:020013 (2019), copia dal repository TPU
+#     via Wayback. DOI: needs-source.
+#   Brevetto RU2239207C1 (Ryzhakova, Yakovleva, TPU, 2003), Google Patents, letto in
+#     russo sull'originale: e' l'UNICA fonte del coefficiente di emanazione e delle
+#     concentrazioni nei fori.
+# Licenza / accesso: articoli open access; brevetto pubblico.
+# Origine dei valori: documento Validazione_NUREG_Tomsk_v1, sezione 5, che dichiara
+#   la trascrizione dalle fonti sopra.
+# Sito: Lagerny Sad, Tomsk (Siberia occidentale, Russia).
+# Strumento: flusso con Alfarad Plus, 64 misure (2018); densita' e porosita' con
+#   anello tagliente; concentrazioni nei fori a 35 e 70 cm dal brevetto (2003).
+# Periodo: brevetto 2003 (emanazione e fori); campagna di flusso 2018.
+#   ATTENZIONE: i due gruppi di dati distano quindici anni e i punti di misura del
+#   2018 non coincidono con il foro del 2003.
+# Formato: long / chiave-valore (un solo sito).
+#
+# Unita' e tipo di ciascuna colonna:
+#   quantity     : nome della grandezza [-]
+#   value        : valore [unita' della colonna unit]
+#   uncertainty  : incertezza come pubblicata [stessa unita']; vuoto se non pubblicata
+#   unit         : unita' di misura
+#   value_type   : misurato | non_pubblicato
+#   year         : anno della misura [-]
+#   source_ref   : fonte specifica della riga
+#   notes        : condizioni e limitazioni
+#
+# TENSIONE INTERNA ALLA FONTE, da dichiarare a chi usa questo file: un profilo di
+#   concentrazione di quell'entita' (6.8 e 11.4 kBq m-3 a 35 e 70 cm) non puo'
+#   alimentare per sola diffusione un flusso di 44 mBq m-2 s-1. I due dati sono in
+#   tensione fra loro dentro la stessa fonte. Punti di misura diversi, quindici anni
+#   di distanza, emanazione non risolta in umidita'. La tesi del gruppo stesso
+#   conclude che ai loro siti non esiste una relazione univoca fra flusso e radio
+#   (variabilita' 37-68%).
+quantity,value,uncertainty,unit,value_type,year,source_ref,notes
+Ra226_soil,30,,Bq kg-1,misurato,,Radiats. Gigiena / brevetto,valore identico nelle due fonti
+total_porosity,0.45,,-,misurato,2018,Radiats. Gigiena 11(2):37,anello tagliente
+dry_bulk_density,1380,,kg m-3,misurato,2018,Radiats. Gigiena 11(2):37,anello tagliente
+gravimetric_water_content,11,,% massa,misurato,2018,Radiats. Gigiena 11(2):37,anello tagliente
+emanation_coefficient_Kem,0.20,,-,misurato,2003,brevetto RU2239207C1,"unica fonte disponibile; NON risolta in funzione dell'umidita'"
+soil_radon_at_0.35m,6.8,,kBq m-3,misurato,2003,brevetto RU2239207C1,foro di misura
+soil_radon_at_0.70m,11.4,,kBq m-3,misurato,2003,brevetto RU2239207C1,foro di misura
+flux_chamber_mean,44,14,mBq m-2 s-1,misurato,2018,Radiats. Gigiena 13(2):57,"Alfarad Plus, 64 misure; punto non coincidente col foro del 2003"
+soil_water_saturation,,,-,non_pubblicato,,,"la saturazione non e' pubblicata; e' pubblicato solo il contenuto d'acqua gravimetrico del 2018. Cella lasciata VUOTA."

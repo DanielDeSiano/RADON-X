@@ -1,0 +1,66 @@
+# Castano-Casco E., Gutierrez-Alvarez I., Barba-Lobo A., Bolivar J.P. (2026),
+# Journal of Hazardous Materials 507:141754, DOI 10.1016/j.jhazmat.2026.141754.
+# Licenza / accesso: CC-BY, con materiale supplementare (Tabelle SM1-SM2). Il testo
+#   e' stato reperito dal repository dell'Universita' di Huelva perche' la pagina
+#   dell'editore presenta un CAPTCHA.
+# Fonte dell'emanazione misurata: Lopez-Coto I. et al. (2014), J. Hazard. Mater.
+#   280:464-471, open access idUS. DOI: needs-source.
+# Origine dei valori: configurazioni di prisma in camera chiusa e punto di campo su
+#   fosfogesso nudo; trascritti nel documento Validazione_Huelva_v1, sezioni 4 e 5.
+# Sito: deposito di fosfogessi di Huelva (Spagna), zona 1, piu' esperimenti di
+#   laboratorio su prismi.
+# Strumento: prismi misurati in camera chiusa da 2.4 L; campo misurato con due sole
+#   camere d'accumulo. Carota di campo con profili di Ra-226 e umidita' su 13
+#   sezioni fino a 88 cm.
+# Periodo: non riportato nei documenti di validazione -> needs-source.
+#
+# Unita' e tipo di ciascuna colonna:
+#   configuration                 : configurazione sperimentale [-]                     etichetta
+#   setting                       : laboratorio_camera_chiusa | campo [-]               etichetta
+#   thickness_m                   : spessore [m]; vuoto se semi-infinito                misurato
+#   Ra226_Bq_kg                   : attivita' specifica di Ra-226 [Bq kg-1]             misurato
+#   Ra226_unc                     : incertezza associata [Bq kg-1]                       misurato
+#   rho_bulk_kg_m3                : densita' apparente [kg m-3]                          misurato
+#   porosity                      : porosita' totale [-]                                 misurato
+#   water_saturation              : saturazione d'acqua [-]                              misurato
+#   water_saturation_unc          : incertezza associata [-]                              misurato
+#   temperature_K                 : temperatura [K]                                       misurato
+#   emanation_reported            : emanazione usata dal paper [-]                        dichiarato dagli autori
+#       (0.15, senza che il paper dichiari se sia il valore a secco o quello efficace)
+#   n_chambers                    : numero di camere di misura [-]                        conteggio
+#   E_measured_mBq_m2_s           : flusso misurato [mBq m-2 s-1]                         misurato
+#   E_measured_unc                : incertezza associata [mBq m-2 s-1]                    misurato
+#   E_RADEXH_authors_mBq_m2_s     : flusso calcolato dagli autori col loro FEM RADEXH
+#                                   [mBq m-2 s-1]                                         CALCOLATO DAGLI AUTORI
+#   production_ceiling_mBq_m2_s   : tetto di produzione lambda*eps*C_Ra*rho*H
+#                                   [mBq m-2 s-1]                                         DEDOTTO
+#       Calcolato nel documento di validazione con l'emanazione del paper (0.15).
+#       Non e' un dato pubblicato: e' un'identita' algebrica sui parametri pubblicati,
+#       riportata perche' rivela un'incoerenza interna al dataset (vedi sotto).
+#
+# INCOERENZA INTERNA DEL DATASET, da dichiarare a chi usa questo file:
+#   i flussi misurati dei prismi (18.1 e 32.6) stanno il 29-36% SOTTO il tetto di
+#   produzione calcolato con l'emanazione del paper stesso (25.5 e 51.0). In stato
+#   stazionario nessun modello di esalazione LIBERA puo' scendere sotto quel tetto
+#   senza violare la conservazione della massa. Anche il FEM degli autori sta sotto
+#   il tetto: sia la misura sia il loro calcolo si riferiscono all'esperimento in
+#   camera chiusa da 2.4 L, dove accumulo e retro-diffusione sopprimono il flusso
+#   netto. I prismi NON sono quindi confrontabili con un calcolo di esalazione libera.
+# REFUSO SEGNALATO NELLA FONTE (non corretto silenziosamente): l'intestazione della
+#   Tabella 9 del paper riporta "Bq m-2 h-1" ma i valori sono coerenti solo come
+#   Bq m-2 s-1. Segnalato dal documento di validazione, non risolto.
+# CONFIGURAZIONI ESCLUSE: le prove con copertura di terreno sopra il fosfogesso
+#   (30 e 60 cm in laboratorio, 20 cm in campo) sono materiali stratificati e non
+#   sono trascritte qui. Attenuazione misurata dal paper: -18% in campo,
+#   -45/-50% in laboratorio; disponibile nella fonte per un test futuro su colonna
+#   stratificata.
+# AMBITO DEI PARAMETRI DI MATERIALE: Ra-226 = 669 Bq kg-1, porosita' 0.5,
+#   saturazione 0.4, densita' 1210 kg m-3 ed emanazione 0.15 sono la caratterizzazione
+#   del fosfogesso riportata dal paper e sono attribuiti qui alle righe dei prismi.
+#   Per la riga di campo il paper da' Ra-226 medio della carota, saturazione media e
+#   temperatura: densita' e porosita' di campo NON sono trascritte nei documenti di
+#   validazione e le celle restano VUOTE. Non vengono estese per analogia.
+configuration,setting,thickness_m,Ra226_Bq_kg,Ra226_unc,rho_bulk_kg_m3,porosity,water_saturation,water_saturation_unc,temperature_K,emanation_reported,n_chambers,E_measured_mBq_m2_s,E_measured_unc,E_RADEXH_authors_mBq_m2_s,production_ceiling_mBq_m2_s
+prisma_10cm,laboratorio_camera_chiusa,0.10,669,,1210,0.5,0.4,,,0.15,,18.1,1.1,15.8,25.5
+prisma_20cm,laboratorio_camera_chiusa,0.20,669,,1210,0.5,0.4,,,0.15,,32.6,0.4,31.7,51.0
+fosfogesso_nudo_semiinfinito,campo,,712.8,0.5,,,0.39,0.03,286,0.15,2,200,130,190,

@@ -1,0 +1,44 @@
+# Ferry C. (2000), "La migration du radon 222 dans un sol", tesi di dottorato
+# Universite' Paris XI / rapporto CEA-R-5946, 167 pp.
+# DOI: nessuno (rapporto tecnico). Accesso: PDF libero sull'archivio ASNR.
+# Fonte complementare per l'emanazione: Ferry C. et al., rapporto IAEA XA0201260
+#   (stesso progetto, stesso materiale, metodo d'accumulo di 21 giorni).
+# Origine dei valori: tesi, Tabella 4-11 (medie annue di flusso) e valori di
+#   emanazione della copertura; trascritti nel documento
+#   Validazione_Kobe_Santander_Bessines_v1, sezione 6.
+# Sito: Bessines-sur-Gartempe (Francia), copertura dei residui di lavorazione
+#   dell'uranio, due parcelle sperimentali.
+# Strumento: flusso misurato in continuo per un anno; dettaglio strumentale non
+#   trascritto nei documenti di validazione -> needs-source.
+# Periodo: febbraio 1998 - febbraio 1999 (medie annue).
+# Numeri decimali: virgola convertita in punto; spazi delle migliaia rimossi;
+#   nessun valore ricalcolato.
+#
+# Unita' e tipo di ciascuna colonna:
+#   parcel_id                     : parcella [-]                                     etichetta
+#   Ra226_range_min_Bq_kg         : estremo inferiore della banda di Ra-226 usata     misurato
+#   Ra226_range_max_Bq_kg         : estremo superiore della banda di Ra-226 usata     misurato
+#       La banda va dalla media dei campioni al valore adottato dagli autori. La
+#       sorgente e' fortemente eterogenea: deviazione standard del Ra fra campioni
+#       circa 50-60%, e le due campagne di caratterizzazione dello stesso sito
+#       differiscono di un fattore 1.6-1.8 sul Ra.
+#   emanation_dry_thesis          : emanazione misurata a SECCO nella tesi [-]        misurato
+#   emanation_accum_IAEA          : emanazione con accumulo di 21 giorni,
+#                                   rapporto IAEA XA0201260 [-]                       misurato
+#   emanation_accum_IAEA_unc      : incertezza associata [-]                          misurato
+#   J_measured_mBq_m2_s           : flusso misurato, media annua [mBq m-2 s-1]        misurato
+#   J_Ferry_calculated_mBq_m2_s   : flusso calcolato dall'autrice [mBq m-2 s-1]       CALCOLATO DAGLI AUTORI
+#   soil_water_saturation         : saturazione d'acqua [-]                           NON PUBBLICATA
+#       cella lasciata VUOTA: l'umidita' numerica non e' pubblicata. Non viene
+#       inventato alcun valore.
+#
+# DATO PIU' IMPORTANTE DI QUESTO DATASET: l'emanazione della stessa copertura e'
+#   stata misurata due volte con metodi diversi. Il rapporto campo/secco che ne
+#   risulta e' x1.5 (Sito 1) e x1.8 (Sito 2). E' una misura diretta del fattore
+#   secco->plateau, sullo stesso materiale, dagli stessi autori.
+# LIMITI DICHIARATI: la misura d'emanazione IAEA al Sito 2 poggia su n = 2. Il
+#   modello di Ferry stessa sovrastimava il Sito 1 di un fattore 2, attribuito
+#   dall'autrice a K_sat e a flussi preferenziali lungo i tensiometri.
+parcel_id,Ra226_range_min_Bq_kg,Ra226_range_max_Bq_kg,emanation_dry_thesis,emanation_accum_IAEA,emanation_accum_IAEA_unc,J_measured_mBq_m2_s,J_Ferry_calculated_mBq_m2_s,soil_water_saturation
+sito_1,947,1750,0.23,0.35,0.17,400,800,
+sito_2,275,600,0.30,0.53,0.03,540,420,

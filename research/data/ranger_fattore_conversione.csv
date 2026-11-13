@@ -1,0 +1,50 @@
+# Provincia uranifera di Ranger, Territorio del Nord (Australia).
+# Fonti (tutte ad accesso libero; il server e' molto lento e l'estrazione e' stata
+# fatta tramite proxy di testo):
+#   Akber R. et al., Internal Report 477, Supervising Scientist (2004):
+#     298 misure di flusso in stagione secca attorno alla miniera di Ranger.
+#   Lawrence C.E., tesi di dottorato, QUT (2005), eprints.qut.edu.au:
+#     626 letture su 28 combinazioni sito/area con Ra-226 co-localizzato.
+#   Bollhofer A. et al., Internal Report 616 (2013).
+#   Mason et al. (1982), citato in IR477 sezione 6.
+#   Lawrence et al. (2009), citato in IR616.
+# DOI: nessuno per i rapporti governativi; DOI della tesi non trascritto ->
+#   needs-source.
+# Origine dei valori: documento Validazione_Ranger_vdSpoel_v1, sezione 1.
+# Strumento: camere d'accumulo di campo; dettaglio strumentale non trascritto ->
+#   needs-source.
+# Periodo: campagne 2002-2013; clima tropicale a stagionalita' secco/umido.
+#
+# PERCHE' QUESTO DATASET NON HA FLUSSI ASSOLUTI CONFRONTABILI: nessuno dei rapporti
+#   misura porosita', densita' o emanazione, cioe' tre parametri di ingresso su sei.
+#   Il confronto onesto e' quindi sul FATTORE DI CONVERSIONE RE-R = flusso / Ra-226,
+#   per il quale esistono tre ancore pubblicate indipendenti.
+# Copertura del dataset originale: flussi da 18 a 81000 mBq m-2 s-1 e Ra-226 da 43 a
+#   44000 Bq kg-1, cioe' quasi quattro ordini di grandezza in entrambi.
+# Umidita' di stagione secca: 2-5% in volume, letta dalla Fig. 5.16 della tesi
+#   (< 4% a Jabiru East). E' un intervallo di figura, non una tabella.
+#
+# Unita' e tipo di ciascuna colonna:
+#   category          : classe di superficie o ancora pubblicata [-]                   etichetta
+#   RE_R              : fattore di conversione [mBq m-2 s-1 per Bq kg-1]               misurato/pubblicato
+#   RE_R_unc_plus     : incertezza superiore [stessa unita']                            pubblicato
+#   RE_R_unc_minus    : incertezza inferiore [stessa unita']                            pubblicato
+#   RE_R_min          : estremo inferiore, dove la fonte da' un intervallo             pubblicato
+#   RE_R_max          : estremo superiore, dove la fonte da' un intervallo             pubblicato
+#   source_ref        : fonte specifica della riga [-]
+#   value_type        : ancora_pubblicata | valore_di_sito | intervallo_di_siti
+#   notes             : condizioni e limitazioni
+#
+# VALORI NON DISPONIBILI: gli otto siti stagionali della tesi hanno RE-R individuali
+#   che i documenti di validazione non trascrivono uno per uno; e' riportato solo
+#   l'intervallo 0.39-0.83 per cinque di essi, piu' i due fuori-banda nominati.
+#   Le celle RE_R dei singoli otto siti restano quindi assenti: non vengono stimate.
+category,RE_R,RE_R_unc_plus,RE_R_unc_minus,RE_R_min,RE_R_max,source_ref,value_type,notes
+bosco_naturale_indisturbato,0.61,0.03,0.03,,,Lawrence et al. 2009 cit. in IR616,ancora_pubblicata,
+suoli_anomaly_2_pre_miniera,0.9,0.4,0.4,,,IR616 sezione 6.2.2,ancora_pubblicata,
+roccia_sterile_secca_valore_universale,0.91,0.47,0.31,,,Mason et al. 1982 cit. in IR477 sezione 6,ancora_pubblicata,incertezza asimmetrica come pubblicata
+superfici_nude_compattate,0.27,,,,,IR616 sezione 6.2.2,ancora_pubblicata,fattore geomorfologico; attesa fuori dalla banda dei suoli naturali
+letti_sabbiosi_di_torrente,,,,,,IR616 sezione 6.2.2,ancora_pubblicata,"la fonte esprime l'effetto come fattore moltiplicativo fino a x10 per materiale sciolto, non come RE-R assoluto: cella lasciata VUOTA"
+sito_mudginberri,0.19,,,,,tesi Lawrence 2005,valore_di_sito,compattazione superficiale
+sito_magela_creek,4.94,,,,,tesi Lawrence 2005,valore_di_sito,letto sabbioso di torrente
+cinque_degli_otto_siti_stagionali,,,,0.39,0.83,tesi Lawrence 2005,intervallo_di_siti,"i valori individuali non sono trascritti nei documenti di validazione; solo l'intervallo"

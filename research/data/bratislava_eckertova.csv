@@ -1,0 +1,67 @@
+# Eckertova T., Mullerova M., Bulko M., Masarik J., Sultani A. (2026)
+# "Different models for calculation of 222Rn flux and validation with experimental
+# data in Bratislava, Slovakia", Journal of Environmental Radioactivity.
+# DOI: needs-source (versione di rivista non ancora consultata).
+# Testo usato: preprint aperto su SSRN, id 5974883, deposito 27/12/2025, 16 pagine.
+# Fonti di controllo incrociato: Eckertova T., tesi di dottorato FMFI UK Bratislava
+#   (2022); Eckertova T. et al., Radiation Protection Dosimetry 198(9-11):771-777
+#   (2022); Holy K. et al., Nukleonika 61(3):281-287 (2016).
+# Origine dei valori: preprint SSRN, sezioni 2.3 e 3.1 e Tabelle 1 e 3.
+# Licenza / accesso: preprint SSRN ad accesso aperto; versione di rivista chiusa
+#   (Elsevier). ATTENZIONE: i valori vanno riconfrontati con la versione pubblicata
+#   prima di essere citati in un articolo.
+# Sito: campus FMPI, Universita' Comenius, Bratislava (Slovacchia). Suolo ranker
+#   limoso-sabbioso ("sandy silt"), moderatamente permeabile.
+# Strumento: camera d'accumulo automatica secondo ISO 11665-7, due cicli da 6 ore
+#   al giorno (flusso); spettrometria gamma HPGe in laboratorio sotterraneo FMPI
+#   (Ra-226, Ra-228); laboratorio accreditato INGEO-ENVILAB (Zilina) per porosita'
+#   e densita' sullo strato 0-20 cm.
+# Periodo: ottobre 2020 - giugno 2024 (quasi quattro anni in continuo).
+# Formato: long / chiave-valore, perche' il dataset e' la caratterizzazione di un
+#   unico sito piu' le statistiche aggregate della serie.
+#
+# Unita' e tipo di ciascuna colonna:
+#   quantity      : nome della grandezza [-]
+#   value         : valore [unita' della colonna unit]; VUOTO = non pubblicato
+#   uncertainty   : incertezza come pubblicata [stessa unita']; vuoto se non pubblicata
+#   unit          : unita' di misura
+#   value_type    : misurato | calcolato_dagli_autori | dedotto | non_pubblicato
+#   source_detail : sezione/tabella della fonte
+#   notes         : condizioni, ambiguita' e note di provenienza
+#
+# VALORE MANCANTE DICHIARATO: l'umidita' volumetrica del suolo e' misurata ogni ora
+#   a 30 cm ma NON e' pubblicata numericamente (compare solo in figura). La cella
+#   value della riga soil_volumetric_moisture e' quindi VUOTA. Non viene inventato
+#   alcun numero. Gli autori dichiarano i dati orari disponibili su richiesta.
+quantity,value,uncertainty,unit,value_type,source_detail,notes
+Ra226_soil,28.0,0.3,Bq kg-1,misurato,preprint 2.3,spettrometria gamma HPGe
+Ra228_soil,25.9,0.5,Bq kg-1,misurato,preprint 2.3,usato dagli autori come proxy del Th-232 in equilibrio secolare
+emanation_coefficient_Ke,0.168,,-,misurato,"Eckertova et al. 2022 RPD 198:771","valore di plateau, misurato in funzione dell'umidita', plateau oltre circa 5% di acqua; PROVENIENZA AMBIGUA: nella tesi 2022 il valore adottato per Bratislava e' 0.174 mentre 0.168+-0.018 compare per la localita' Horna Streda -> da chiarire con gli autori"
+total_porosity,0.459,,-,misurato,laboratorio accreditato INGEO-ENVILAB,strato 0-20 cm; prima misura diretta del sito
+dry_bulk_density,1430,,kg m-3,misurato,laboratorio accreditato INGEO-ENVILAB,strato 0-20 cm
+texture_gravel_fraction,7,,% massa,misurato,preprint,tessitura sandy silt
+texture_sand_fraction,36,,% massa,misurato,preprint,tessitura sandy silt
+texture_silt_fraction,49,,% massa,misurato,preprint,tessitura sandy silt
+texture_clay_fraction,8,,% massa,misurato,preprint,tessitura sandy silt
+soil_volumetric_moisture,,,m3 m-3,non_pubblicato,preprint (solo figura),"misurata ogni ora a 30 cm ma pubblicata solo in figura; cella lasciata VUOTA di proposito; dati orari dichiarati disponibili su richiesta"
+soil_temperature_30cm_min,1,,degC,misurato,preprint,estremo inferiore nell'arco dello studio
+soil_temperature_30cm_max,27,,degC,misurato,preprint,estremo superiore nell'arco dello studio
+diffusion_length_observed_min,0.7,,m,calcolato_dagli_autori,preprint 3.1,ricavata dagli autori dai profili; usata come vincolo sperimentale
+diffusion_length_observed_max,1.1,,m,calcolato_dagli_autori,preprint 3.1,ricavata dagli autori dai profili; usata come vincolo sperimentale
+flux_measured_mean,15.4,4.7,mBq m-2 s-1,misurato,"preprint Tabella 3, riga Measured ERR","media 2020-2024; l'incertezza riportata e' la deviazione standard della serie, non un'incertezza di misura"
+flux_measured_median,16.1,,mBq m-2 s-1,misurato,preprint Tabella 3,
+flux_measured_min,2.2,,mBq m-2 s-1,misurato,preprint Tabella 3,minimo giornaliero invernale
+flux_measured_max,29.7,,mBq m-2 s-1,misurato,preprint Tabella 3,massimo giornaliero estivo
+soil_radon_at_0.8m,8.7,,kBq m-3,dedotto,"Holy et al. 2016, Nukleonika 61(3):281","stima INDIRETTA: relazione empirica E_S = 1.66*A_v + 0.95 invertita sul flusso medio; non e' una misura diretta"
+model_E1D4_mean,14.7,,mBq m-2 s-1,calcolato_dagli_autori,preprint Tabelle 1 e 3,gradiente + Currie; miglior NSE del paper; usa il radon in suolo misurato a 80 cm
+model_E2D5_mean,15.2,,mBq m-2 s-1,calcolato_dagli_autori,preprint Tabelle 1 e 3,Karstens + Millington-Quirk; miglior combinazione senza dati di suolo
+model_E2D1_mean,16.5,,mBq m-2 s-1,calcolato_dagli_autori,preprint Tabelle 1 e 3,Karstens + Rogers & Nielson
+model_E3_mean,8.4,,mBq m-2 s-1,calcolato_dagli_autori,preprint Tabelle 1 e 3,proxy gamma di Szegvary; costante
+model_E1D4_NSE,0.31,,-,calcolato_dagli_autori,preprint Tabella 1,Nash-Sutcliffe sul confronto giornaliero
+model_E2D5_NSE,0.14,,-,calcolato_dagli_autori,preprint Tabella 1,Nash-Sutcliffe sul confronto giornaliero
+model_family_mean_min,13.5,,mBq m-2 s-1,calcolato_dagli_autori,preprint,"estremo inferiore delle medie prodotte dalle combinazioni di modelli del paper; NOTA: il numero di combinazioni e' riportato in modo incoerente nei documenti di validazione (16 in un punto, 18 in un altro) -> needs-source"
+model_family_mean_max,19.7,,mBq m-2 s-1,calcolato_dagli_autori,preprint,estremo superiore delle medie prodotte dalle combinazioni di modelli del paper
+alt_param_set_2022_Ra226,33.2,,Bq kg-1,misurato,tesi Eckertova 2022,set di parametri alternativo (valori di classe) dello stesso sito
+alt_param_set_2022_porosity,0.40,,-,dedotto,tesi Eckertova 2022,valore di classe tessiturale non misurato sul sito
+alt_param_set_2022_dry_density,1350,,kg m-3,dedotto,tesi Eckertova 2022,valore di classe tessiturale non misurato sul sito
+alt_param_set_2022_Ke,0.174,,-,misurato,tesi Eckertova 2022,valore adottato per Bratislava nella tesi; vedi ambiguita' sulla riga emanation_coefficient_Ke

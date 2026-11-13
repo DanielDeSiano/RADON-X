@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "site": {
+    "name": "Ischia exploratory site",
+    "lithotype": "tuff_unwelded",
+    "ra226_bq_kg": 185.0,
+    "emanation_fraction": 0.31,
+    "porosity": 0.42,
+    "dry_bulk_density_kg_m3": 1612.0,
+    "water_saturation": 0.11,
+    "column_depth_m": 3.0,
+    "initial_pore_accessibility": 1.0,
+    "provenance": {}
+  },
+  "simulation": {
+    "cells": 30,
+    "duration_days": 6.0,
+    "output_step_seconds": 3600.0,
+    "average_start_day": 4.5,
+    "average_end_day": 5.5
+  }
+}
+

@@ -1,0 +1,60 @@
+# Fuente M., Rabago D., Goggins J., Fuente I., Sainz C., Foley M. (2019),
+#   "Radon mitigation by soil depressurisation case study: radon concentration
+#   and pressure field extension monitoring in a pilot house in Spain",
+#   Science of the Total Environment 695:133746,
+#   DOI 10.1016/j.scitotenv.2019.133746. Versione letta: arXiv:2403.15392
+#   (PDF scaricato e riletto per intero il 31/08/2026 prima di questa
+#   trascrizione).
+# Licenza: arXiv, distribuzione libera del preprint; l'articolo di rivista e'
+#   sotto licenza Elsevier.
+# Sito: casa pilota di Saelices el Chico (Salamanca, Spagna), sul sedime
+#   dell'ex impianto uranifero gestito da ENUSA. Ra-226 medio del suolo
+#   1600 Bq/kg (citato dagli autori da Frutos et al. 2011); area circostante
+#   ~40 Bq/kg. Radon esterno al sito ~300 Bq/m3.
+# Edificio: due zone misurate (seminterrato e piano terra); soletta in
+#   calcestruzzo da 10 cm su strato di aggregato da 15 cm; due sistemi di
+#   depressurizzazione con pozzetto da 1 m2 x 0.5 m. Nel 2006, prima di ogni
+#   misura di mitigazione, uno studio precedente riporta 40 kBq/m3 nel
+#   seminterrato e 7 kBq/m3 al piano terra (Frutos et al. 2011).
+# Strumenti: Radon Scout e Radon Scout Home (SARAD), AlphaE (Bertin),
+#   verificati in camera radon (Fuente et al. 2018); dosimetri passivi
+#   saturati nella maggior parte dei casi per le alte concentrazioni.
+#
+# Origine dei valori: Tabella 1 (fasi e date), Tabella 2 (concentrazioni per
+#   fase e zona e riduzioni rispetto alla media dei periodi chiusi), testo
+#   (medie a casa chiusa, radon esterno, pressione al pozzetto della fase 6,
+#   correlazioni di Pearson).
+# Correlazioni dichiarate dagli autori sul radon a casa chiusa (95 %):
+#   pressione atmosferica r = -0.44; temperatura r = +0.44; vento r = -0.59;
+#   nessuna correlazione significativa con umidita' relativa e pioggia.
+# Pressione media al pozzetto nella fase 6: -55 Pa.
+#
+# Unita' e tipo di ciascuna colonna:
+#   phase           : fase di prova come in Tabella 1 [-]; "closed_avg" e' la
+#                     media dei periodi chiusi usata come riferimento          etichetta
+#   description     : descrizione della fase [-]                              dal paper
+#   vext_m_s        : velocita' di estrazione del ventilatore [m s-1]         dichiarato
+#   date_start      : inizio della fase [gg/mm/aaaa]                          Tabella 1
+#   date_end        : fine della fase [gg/mm/aaaa]                            Tabella 1
+#   zone            : basement | ground_floor [-]                            etichetta
+#   c_rn_bq_m3      : concentrazione di radon [Bq m-3]                       misurato
+#   reduction_pct   : riduzione rispetto alla media a casa chiusa [%]        calcolato dagli autori
+#
+# Le celle vuote sono dati NON pubblicati (per la fase 2 il piano terra non e'
+#   tabulato), non stimati. Le serie orarie esistono solo in figura e NON sono
+#   trascritte: una loro digitalizzazione andrebbe dichiarata come tale.
+phase,description,vext_m_s,date_start,date_end,zone,c_rn_bq_m3,reduction_pct
+closed_avg,media dei periodi chiusi,,,,basement,54625,
+closed_avg,media dei periodi chiusi,,,,ground_floor,26421,
+1,casa chiusa,,25/06/2018,26/07/2018,,,
+2,depressurizzazione passiva,,26/07/2018,31/08/2018,basement,7417,86
+3,casa chiusa,,10/10/2018,13/11/2018,,,
+4,depressurizzazione attiva,0-3.5,13/11/2018,16/11/2018,basement,662,99
+4,depressurizzazione attiva,0-3.5,13/11/2018,16/11/2018,ground_floor,328,99
+5,casa chiusa,,13/12/2018,19/02/2019,,,
+6,depressurizzazione attiva,1.5,19/02/2019,06/03/2019,basement,3326,94
+6,depressurizzazione attiva,1.5,19/02/2019,06/03/2019,ground_floor,3689,86
+7,casa chiusa,,06/03/2019,14/03/2019,,,
+8,depressurizzazione attiva,2,14/03/2019,02/04/2019,basement,3701,93
+8,depressurizzazione attiva,2,14/03/2019,02/04/2019,ground_floor,2279,91
+9,casa chiusa,,02/04/2019,30/04/2019,,,

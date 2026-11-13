@@ -1,0 +1,40 @@
+{
+ "campi_del_mandato": {
+  "environmental_conditions": "Moisture is the controlled variable",
+  "instrument": "Laboratory tray 275x210 mm, layer 50 mm; HPGe 80000 s for Ra-226",
+  "licence": "Taylor & Francis / J-STAGE, free access (DOI 10.1080/18811248.2007.9711855)",
+  "missing_values": "Emanation NOT measured here: read off a Strong & Levins 1982 graph, f = 0.079-0.28. Values extracted from figure vector geometry.",
+  "sampling_frequency": {
+   "motivo": "moisture curve: one point per moisture level, not a time series",
+   "stato": "non applicabile"
+  },
+  "site": "Weathered granite soil, central Ibaraki Prefecture, Japan, laboratory tray",
+  "soil_properties": "Ra-226 57.0 and Ra-224 55.8 Bq/kg; density 1730 kg/m3; porosity 0.30",
+  "split": "Exploratory only: the emanation is not measured, so a flux comparison would test an assumption, not the model.",
+  "timestamp": "Hosoda et al. 2007",
+  "units": "Moisture percent by mass; exhalation mBq/m2/s"
+ },
+ "colonne": [
+  "moisture_content_pct",
+  "E_Rn_measured_mBq_m2_s",
+  "E_Rn_meas_errbar_low",
+  "E_Rn_meas_errbar_high",
+  "E_Rn_calculated_mBq_m2_s",
+  "ratio_meas_over_calc"
+ ],
+ "file": "hosoda2007_moisture_curve.csv",
+ "file_del_gruppo": [
+  "hosoda2007_moisture_curve.csv",
+  "hosoda2007_calculated_curve.csv",
+  "hosoda2007_fig2_raw_scatter.csv"
+ ],
+ "fonte_della_provenienza": "radon_x.data_manifest.MANIFEST",
+ "generato_da": "tools/genera_metadati_dati.py",
+ "impronta_sha256": "cb37b8d6935fce35",
+ "n_righe": 10,
+ "note": "The Richards step is not robust on this configuration at millimetric cells (audit section 26): the correct protocol freezes the water field, and with it the model matches the slab solution to 1-2%.",
+ "provenienza_altrove": "",
+ "righe_di_testa_saltate": 23,
+ "ruolo": "solo-esplorativo",
+ "schema_version": "1.0"
+}

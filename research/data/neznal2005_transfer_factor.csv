@@ -1,0 +1,52 @@
+# Neznal M. & Neznal M. (2005?) "Transfer factor: can the parameter be used to
+#   predict the indoor radon concentration in an individual house?", atto di
+#   convegno, RADON v.o.s., Praha. Nessun DOI. PDF integrale pubblico:
+#   https://www.radon-vos.cz/pdf/transfer_factor.pdf (riaperto e riletto per
+#   intero il 31/08/2026 prima di questa trascrizione).
+# Progetto: State Office for Nuclear Safety, Research and Development project
+#   No. 2/04/V; misure 2004-2005, Repubblica Ceca.
+# Licenza: non dichiarata nel PDF; documento pubblico sul sito dell'autore.
+#
+# CHE COSA CONTIENE: le coppie (radon nel gas del suolo, radon indoor) dei
+#   QUATTRO casi di studio del paper, piu' una quinta casa risanata senza
+#   parametri di suolo tabulati. La scheda bibliografica del progetto
+#   (INDOOR_CANDIDATI.md) parlava di quindici case: il paper ne tabula CINQUE,
+#   e il rapporto di progetto da centinaia di pagine che le conterrebbe non e'
+#   pubblico. Corretto qui, alla fonte.
+#
+# Origine dei valori, tabella per tabella:
+#   - Tabella 1 (Lounovice A e B): cA75, k75, potenziale, indice.
+#   - Tabella 2 (Potucky, Horni Slavkov B): idem.
+#   - Tabella 3 (Horni Slavkov A): elettreti per stanza, esposizione
+#     13/10/2004 - 13/12/2004, valori pubblicati come limiti inferiori (>).
+#   - Testo: tutti i valori indoor delle altre case (media annua, medie di
+#     rilievo, soglie), trascritti con il loro qualificatore.
+#
+# Unita' e tipo di ciascuna colonna:
+#   house            : casa come nel paper [-]                            etichetta
+#   zone             : ambiente della misura indoor [-]                   etichetta
+#   soil_cA75_kBq_m3 : radon nel gas del suolo, terzo quartile [kBq m-3]  misurato
+#   k75_m2           : permeabilita', terzo quartile [m2]                 misurato
+#   radon_potential  : potenziale radon del sito (Neznal et al. 2004) [-] derivato dagli autori
+#   radon_index      : indice radon del sito [-]                         derivato dagli autori
+#   indoor_bq_m3     : radon indoor [Bq m-3]                             misurato
+#   qualifier        : <, >, <=, ~ : il valore e' un limite o un circa    dichiarato dal paper
+#   method           : strumento/tipo di misura [-]                      dal testo
+#   period           : periodo della misura [-]                          dal testo
+#   note             : contesto dichiarato dagli autori [-]              dal testo
+#
+# CENSURA: nessun valore indoor di questo paper e' un numero esatto; ogni riga
+#   porta il suo qualificatore e ogni analisi a valle deve trattarli come
+#   limiti, mai come punti.
+# Le celle di suolo di Horni Slavkov A sono VUOTE: il paper non le tabula.
+house,zone,soil_cA75_kBq_m3,k75_m2,radon_potential,radon_index,indoor_bq_m3,qualifier,method,period,note
+lounovice_A,media delle stanze,143.6,1.4e-11,167.0,high,100,<,media di lungo periodo,2004-2005,casa nuova con membrana antiradon efficace
+lounovice_B,piu' stanze,122.3,1.1e-11,126.5,high,400,>,media di lungo periodo,2004-2005,membrana fallita: tipo inadeguato e giunti non sigillati; brevi periodi oltre 2000
+potucky,stanze abitabili,70.7,1.6e-11,87.6,high,20000,~,dosimetri a tracce (media annua),2004,quasi 20000: casa vecchia senza risanamento
+potucky,stanze abitabili,70.7,1.6e-11,87.6,high,35000,~,rilievo diagnostico,ottobre 2004,media del rilievo
+potucky,cantina,70.7,1.6e-11,87.6,high,77000,~,rilievo diagnostico,ottobre 2004,pari al radon del gas del suolo intorno alle fondazioni
+horni_slavkov_B,stanze abitabili,114.1,5.7e-12,90.9,high,700,<=,media di lungo periodo,2004-2005,casa vecchia senza risanamento; stesso potenziale di Potucky
+horni_slavkov_A,soggiorno,,,,,2505,>,elettreti,13/10/2004-13/12/2004,risanata con depressurizzazione sotto-soletta; impianto spento durante due visite
+horni_slavkov_A,camera,,,,,2272,>,elettreti,13/10/2004-13/12/2004,come sopra
+horni_slavkov_A,corridoio,,,,,2567,>,elettreti,13/10/2004-13/12/2004,come sopra
+horni_slavkov_A,cucina,,,,,2483,>,elettreti,13/10/2004-13/12/2004,come sopra

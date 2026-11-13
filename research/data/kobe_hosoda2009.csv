@@ -1,0 +1,53 @@
+# Hosoda M. et al. (2009) "Simultaneous measurements of radon and thoron exhalation
+# rates and comparison with values calculated by UNSCEAR equation",
+# Journal of Radiation Research 50(4):333-343, DOI 10.1269/jrr.08121.
+# Licenza / accesso: open access, PDF integrale libero su J-STAGE.
+# Origine dei valori: Tabella 3 (parametri di suolo) e Tabella 1 (flussi misurati),
+#   trascritti alla lettera nel documento Validazione_Kobe_Santander_Bessines_v1.
+# Sito: Kobe (Giappone), granito alterato del monte Rokko. Sette punti di misura,
+#   quattro stagioni (maggio / agosto / novembre 2007, gennaio 2008).
+#   Il punto 4 e' ESCLUSO dal dataset perche' il paper non ha campioni di suolo per
+#   quel punto (ha solo i flussi). Restano sei punti: 1, 2, 3, 5, 6, 7.
+# Strumento: radon e toron misurati simultaneamente; il dettaglio strumentale non e'
+#   trascritto nei documenti di validazione -> needs-source.
+# Periodo: maggio 2007 - gennaio 2008.
+#
+# Unita' e tipo di ciascuna colonna:
+#   point_id                  : punto di misura come nel paper [-]                     etichetta
+#   rho_dry_kg_m3             : densita' apparente secca [kg m-3]                       misurato
+#   rho_dry_sd                : deviazione standard associata [kg m-3]                  misurato
+#   rho_grain_g_cm3           : densita' dei grani [g cm-3]                             misurato
+#   porosity                  : porosita' totale [-]                                    misurato
+#   porosity_sd               : deviazione standard associata [-]                       misurato
+#   Ra226_Bq_kg               : attivita' specifica di Ra-226 [Bq kg-1]                 misurato
+#   Ra226_sd                  : deviazione standard associata [Bq kg-1]                 misurato
+#   n_dates_with_parameters   : numero di date con parametri completi [-]               conteggio
+#   site_condition            : stato del punto [-]                                     etichetta degli autori
+#   E_Rn_measured_mBq_m2_s    : flusso di radon misurato, media sulle stagioni [mBq m-2 s-1]  misurato
+#   E_Rn_measured_sd          : deviazione standard sulle stagioni [mBq m-2 s-1]        misurato
+#   E_Tn_measured_mBq_m2_s    : flusso di toron misurato [mBq m-2 s-1]                  misurato
+#   Tn_over_Rn_measured       : rapporto toron/radon [-]                                DEDOTTO
+#       (rapporto delle due colonne misurate, come riportato nel documento di
+#        validazione; non e' un valore indipendente)
+#
+# DATI NON PUBBLICATI (celle assenti per costruzione, non stimate):
+#   - Th-232 dei suoli: NON pubblicato dal paper. Senza di esso il confronto sul
+#     toron e' una diagnostica, non una validazione.
+#   - L'abbinamento riga-data della Tabella 3 non e' esplicito nel paper (il punto 1
+#     ha 5 date di flusso e 4 righe di parametri): il confronto e' per punto, non
+#     per data. I parametri per data sono in kobe_hosoda2009_per_data.csv.
+#   - Temperatura del suolo per data: non pubblicata -> needs-source.
+# AVVERTENZA DEGLI AUTORI: i punti del campus (3, 5, 6, 7) sono disturbati da
+#   tubazioni interrate e riporti compattati; solo i punti 1 e 2 sono considerati
+#   dagli autori rappresentativi di suolo naturale.
+# NOTA sulla colonna del coefficiente di diffusione della Tabella 3 del paper:
+#   il documento di validazione la segnala come internamente incoerente in alcune
+#   righe (lo stesso porosita'/emanazione con saturazioni diverse produce valori non
+#   monotoni). Non e' quindi trascritta qui.
+point_id,rho_dry_kg_m3,rho_dry_sd,rho_grain_g_cm3,porosity,porosity_sd,Ra226_Bq_kg,Ra226_sd,n_dates_with_parameters,site_condition,E_Rn_measured_mBq_m2_s,E_Rn_measured_sd,E_Tn_measured_mBq_m2_s,Tn_over_Rn_measured
+1,1060,190,2.67,0.61,0.07,10.1,0.4,4,indisturbato_fuori_campus,8,4,650,81
+2,1010,110,2.63,0.60,0.04,20.6,0.7,4,indisturbato_fuori_campus,15,10,860,57
+3,1520,140,2.67,0.43,0.05,29.7,1.4,6,campus_universitario,9,6,640,71
+5,1590,90,2.63,0.40,0.03,17.1,0.5,2,campus_universitario,3,1,1010,337
+6,1470,210,2.68,0.45,0.08,29.7,0.6,6,campus_universitario,17,11,1540,91
+7,1480,90,2.64,0.44,0.03,20.1,0.6,2,campus_universitario,9,1,1110,123

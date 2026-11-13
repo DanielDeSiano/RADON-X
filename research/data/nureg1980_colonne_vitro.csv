@@ -1,0 +1,66 @@
+# Rogers V.C. et al. (1980), "Characterization of uranium tailings cover materials
+# for radon flux reduction", NUREG/CR-1081 (FBDU-218-2), marzo 1980.
+# DOI: nessuno (rapporto tecnico). Identificativo di deposito: OSTI 5629662.
+# Licenza / accesso: rapporto governativo statunitense, testo integrale libero su
+#   OSTI.gov (il sito NRC non e' accessibile agli strumenti automatici, stesso
+#   documento). Stato di licenza formale: pubblico dominio presunto -> needs-source.
+# Origine dei valori: Tabelle 5-1 e 5-4, verificate direttamente sulle immagini delle
+#   pagine del PDF perche' il livello testo e' inutilizzabile; trascritti nel
+#   documento Validazione_NUREG_Tomsk_v1, sezioni 3 e 4.
+# Sito: colonne di prova sigillate, laboratorio. Diametro 0.61 m, 0.61 m di sterili
+#   d'uranio Vitro come sorgente. Due serie: Set 1 (otto colonne, sterili molto
+#   umidi) e Set 2 (sei colonne, sterili moderatamente umidi).
+# Strumento: flusso misurato con canestri a carbone attivo tarati su standard di
+#   Ra-226.
+# Periodo: 1980 (data del rapporto); date di misura non trascritte -> needs-source.
+# Numeri decimali: virgola convertita in punto; spazi delle migliaia rimossi;
+#   nessun valore ricalcolato. Il Ra-226 e' lasciato nell'unita' originale del
+#   rapporto (pCi/g) e NON convertito, per non introdurre arrotondamenti.
+#
+# Parametri comuni a tutte le colonne (non ripetuti riga per riga):
+#   spessore di sterili        H   = 0.61 m
+#   diametro della colonna         = 0.61 m
+#   potere emanante            eps = 0.298 +- 0.018 (29.8 +- 1.8 %), misurato
+#   porosita'                  phi = 0.40   -- da rapporto gemello RAE-8810-6
+#   densita' apparente         rho = 1620 kg m-3 -- da rapporto gemello RAE-8810-6
+#   Le ultime due sono una GIUNZIONE FRA RAPPORTI, dichiarata: non provengono da
+#   NUREG/CR-1081.
+#   umidita': il rapporto da' solo l'intervallo complessivo 9-27% in peso, NON il
+#   valore per colonna. Vedi la colonna Sw_inverted_from_D_derived.
+#
+# Unita' e tipo di ciascuna colonna:
+#   column_name              : nome della colonna sperimentale [-]                     etichetta
+#   set_id                   : serie sperimentale, 1 o 2 [-]                            etichetta
+#   Ra226_pCi_g              : attivita' specifica di Ra-226 [pCi g-1]                  vedi nota
+#   D_cm2_s                  : coefficiente di diffusione della colonna [cm2 s-1]       CALCOLATO
+#       DAGLI AUTORI: il rapporto dichiara che i D sono "calcolati dall'Eq. (13)", non
+#       misurati indipendentemente, e NON dichiara la convenzione (apparente o bulk).
+#   J_measured_mBq_m2_s      : flusso nudo misurato [mBq m-2 s-1]                       misurato
+#   J_measured_unc           : incertezza come pubblicata [mBq m-2 s-1]                 misurato
+#   Sw_inverted_from_D_derived : saturazione d'acqua [-]                                DEDOTTO
+#       NON E' UN DATO PUBBLICATO. E' l'inversione del D della colonna attraverso la
+#       correlazione di Rogers & Nielson, cioe' la stessa chiusura usata dal modello
+#       RADON-X. NON va usata come ingresso indipendente: e' model-dipendente e in
+#       regime quasi saturo e' fragile (a parita' di umidita' terreni diversi possono
+#       avere D che differiscono quasi di un fattore dieci).
+#   circularity_flag         : dichiarazione di circolarita' [-]
+#
+# CIRCOLARITA' DICHIARATA DALLA FONTE STESSA: la nota della Tabella 5-1 dice che i
+#   Ra-226 del Set 2 sono "normalizzati ai flussi nudi misurati". Il Set 2 non e'
+#   quindi un confronto indipendente: e' un test di consistenza. I Ra del Set 1 sono
+#   misurati indipendentemente.
+column_name,set_id,Ra226_pCi_g,D_cm2_s,J_measured_mBq_m2_s,J_measured_unc,Sw_inverted_from_D_derived,circularity_flag
+Powder River 1,2,1130,4.5e-3,21645,2516,0.69,Ra_normalizzato_ai_flussi
+Powder River 2,2,1450,4.5e-3,27861,2479,0.69,Ra_normalizzato_ai_flussi
+Shirley Basin 1,2,1650,4.5e-3,31635,3256,0.69,Ra_normalizzato_ai_flussi
+Shirley Basin 2,2,1860,4.5e-3,35594,5920,0.69,Ra_normalizzato_ai_flussi
+Ambrosia Lake 1,2,1690,4.5e-3,32412,4884,0.69,Ra_normalizzato_ai_flussi
+Ambrosia Lake 2,2,1510,4.5e-3,28934,2738,0.69,Ra_normalizzato_ai_flussi
+Powder River 1,1,1620,5.1e-5,6475,1739,0.95,Ra_misurato_indipendentemente
+Powder River 2,1,1190,1.2e-4,5698,1517,0.92,Ra_misurato_indipendentemente
+Shirley Basin 1,1,1310,1.7e-4,7511,1702,0.91,Ra_misurato_indipendentemente
+Shirley Basin 2,1,1080,2.3e-4,7363,1887,0.89,Ra_misurato_indipendentemente
+Ambrosia Lake 1,1,1310,6.8e-5,4810,1073,0.94,Ra_misurato_indipendentemente
+Ambrosia Lake 2,1,1190,1.7e-4,6845,1776,0.91,Ra_misurato_indipendentemente
+Wyoming 1,1,1300,1.4e-4,6882,1406,0.92,Ra_misurato_indipendentemente
+Wyoming 2,1,1100,1.9e-4,6734,1184,0.90,Ra_misurato_indipendentemente

@@ -1,0 +1,21 @@
+# Lucchetti C., Castelluccio M., Altamore M., Briganti A., Galli G., Soligo M.,
+# Tuccimei P., Voltaggio M. (2020) "Using a scale model room to assess the
+# contribution of building material of volcanic origin to indoor radon",
+# Nukleonika 65(2):71-76, DOI 10.2478/nuka-2020-0010.
+# License (verbatim from p.71): "(c) 2020 C. Lucchetti et al. This is an open
+# access article distributed under the Creative Commons
+# Attribution-NonCommercial-NoDerivatives 3.0 License (CC BY-NC-ND 3.0)."
+# Table 2 (p.74) "Porosity, 232Th, 226Ra and 40K specific activities and 222Rn
+# and 220Rn exhalation rates (E) of building materials used in the Caprarola area".
+# Transcribed VERBATIM from the published PDF.
+# Extraction route: the PDF tables could not be read from the web page (binary PDF);
+# PDF downloaded with curl from https://sciendo.com/pdf/10.2478/nuka-2020-0010
+# (301 redirect to reference-global.com followed by curl -L), text extracted
+# with system python3 + pypdf 6.14.2 (pypdf not present in project venv).
+# Units: porosity in %, activities in Bq/kg, exhalation rates in Bq m-2 h-1.
+# Uncertainties as quoted in Table 2 (plus/minus values).
+material,geology,porosity_pct,Th232_Bq_kg,Th232_unc,Ra226_Bq_kg,Ra226_unc,K40_Bq_kg,K40_unc,E222_Bq_m2_h,E222_unc,E220_Bq_m2_h,E220_unc
+Tufo di Gallese,Lithoid ignimbrite,43,290,5,190,3,2239,28,5.91,0.14,6434,494
+Tufo di Riano,Lithoid ignimbrite,50,205,7,115,4,1576,43,2.15,0.13,4223,278
+Peperino Grigio,Phreatomagmatic product,19,117,4,102,2,1158,19,0.78,0.16,2655,332
+Peperino Rosato,Phreatomagmatic product,18,155,4,117,2,1273,12,0.44,0.19,1632,199

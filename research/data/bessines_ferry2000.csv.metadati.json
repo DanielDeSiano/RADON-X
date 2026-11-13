@@ -1,0 +1,41 @@
+{
+ "campi_del_mandato": {
+  "environmental_conditions": {
+   "che_cosa_cercare": "field moisture, not published",
+   "stato": "fonte da trovare"
+  },
+  "instrument": "Continuous flux over one year, annual means tabulated",
+  "licence": "Public report, open archive, attribution",
+  "missing_values": "Only two rows (annual means per plot): no series.",
+  "sampling_frequency": "Continuous, annual means published",
+  "site": "Uranium mill tailings cover, Bessines-sur-Gartempe, France, two plots",
+  "soil_properties": "Ra-226 and emanation published; porosity and density not tabulated here",
+  "split": "Exploratory only: two annual means with missing inputs.",
+  "timestamp": "Thesis / CEA report 2000, one year",
+  "units": "Flux Bq/m2/s; Ra-226 Bq/kg"
+ },
+ "colonne": [
+  "parcel_id",
+  "Ra226_range_min_Bq_kg",
+  "Ra226_range_max_Bq_kg",
+  "emanation_dry_thesis",
+  "emanation_accum_IAEA",
+  "emanation_accum_IAEA_unc",
+  "J_measured_mBq_m2_s",
+  "J_Ferry_calculated_mBq_m2_s",
+  "soil_water_saturation"
+ ],
+ "file": "bessines_ferry2000.csv",
+ "file_del_gruppo": [
+  "bessines_ferry2000.csv"
+ ],
+ "fonte_della_provenienza": "radon_x.data_manifest.MANIFEST",
+ "generato_da": "tools/genera_metadati_dati.py",
+ "impronta_sha256": "8e024c30a7de70a3",
+ "n_righe": 2,
+ "note": "An IRSN expertise report of 2014 documents INDOOR concentrations in a house on the same commune and the same material: see INDOOR_CANDIDATI.md.",
+ "provenienza_altrove": "",
+ "righe_di_testa_saltate": 41,
+ "ruolo": "solo-esplorativo",
+ "schema_version": "1.0"
+}

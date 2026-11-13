@@ -1,0 +1,40 @@
+{
+ "campi_del_mandato": {
+  "environmental_conditions": "Moisture given only as the overall range 9-27% by weight",
+  "instrument": "Laboratory columns, US government report 1980",
+  "licence": "US federal government report: free reuse with attribution",
+  "missing_values": "Per-column moisture missing: only the overall range.",
+  "sampling_frequency": {
+   "che_cosa_cercare": "per-column counting schedule, in the report",
+   "stato": "fonte da trovare"
+  },
+  "site": "Uranium tailings columns, Vitro site, NUREG/CR-1081",
+  "soil_properties": "Ra-226, density, porosity published per column",
+  "split": "Exploratory only: moisture, the dominant control, is not resolved per column.",
+  "timestamp": "Report 1980",
+  "units": "Ra-226 Bq/kg; flux; moisture percent by weight"
+ },
+ "colonne": [
+  "column_name",
+  "set_id",
+  "Ra226_pCi_g",
+  "D_cm2_s",
+  "J_measured_mBq_m2_s",
+  "J_measured_unc",
+  "Sw_inverted_from_D_derived",
+  "circularity_flag"
+ ],
+ "file": "nureg1980_colonne_vitro.csv",
+ "file_del_gruppo": [
+  "nureg1980_colonne_vitro.csv"
+ ],
+ "fonte_della_provenienza": "radon_x.data_manifest.MANIFEST",
+ "generato_da": "tools/genera_metadati_dati.py",
+ "impronta_sha256": "6f4c8e92d707d9b7",
+ "n_righe": 14,
+ "note": "",
+ "provenienza_altrove": "",
+ "righe_di_testa_saltate": 51,
+ "ruolo": "solo-esplorativo",
+ "schema_version": "1.0"
+}

@@ -1,0 +1,55 @@
+{
+ "campi_del_mandato": {
+  "environmental_conditions": {
+   "che_cosa_cercare": "weather during the campaigns",
+   "stato": "fonte da trovare"
+  },
+  "instrument": {
+   "che_cosa_cercare": "chamber and spectrometry, in the group's papers",
+   "stato": "fonte da trovare"
+  },
+  "licence": {
+   "che_cosa_cercare": "access status of the source publication",
+   "stato": "fonte da trovare"
+  },
+  "missing_values": {
+   "motivo": "tabulated values, complete as published: no gaps to declare",
+   "stato": "non applicabile"
+  },
+  "sampling_frequency": {
+   "che_cosa_cercare": "sampling schedule per point, in the same publications",
+   "stato": "fonte da trovare"
+  },
+  "site": "Tomsk, Russia, Ryzhakova group test site",
+  "soil_properties": "Ra-226, porosity, density, moisture published",
+  "split": "Exploratory only, for want of provenance on instrument and dates.",
+  "timestamp": {
+   "che_cosa_cercare": "campaign dates, in the Ryzhakova group publications for the Lagerny site",
+   "stato": "fonte da trovare"
+  },
+  "units": "Ra-226 Bq/kg; flux mBq/m2/s; porosity dimensionless"
+ },
+ "colonne": [
+  "quantity",
+  "value",
+  "uncertainty",
+  "unit",
+  "value_type",
+  "year",
+  "source_ref",
+  "notes"
+ ],
+ "file": "tomsk_ryzhakova.csv",
+ "file_del_gruppo": [
+  "tomsk_ryzhakova.csv"
+ ],
+ "fonte_della_provenienza": "radon_x.data_manifest.MANIFEST",
+ "generato_da": "tools/genera_metadati_dati.py",
+ "impronta_sha256": "ca51f9ac48466930",
+ "n_righe": 9,
+ "note": "",
+ "provenienza_altrove": "",
+ "righe_di_testa_saltate": 40,
+ "ruolo": "solo-esplorativo",
+ "schema_version": "1.0"
+}

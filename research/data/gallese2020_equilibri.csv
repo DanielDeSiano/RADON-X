@@ -1,0 +1,28 @@
+# Lucchetti C., Castelluccio M., Altamore M., Briganti A., Galli G., Soligo M.,
+# Tuccimei P., Voltaggio M. (2020) "Using a scale model room to assess the
+# contribution of building material of volcanic origin to indoor radon",
+# Nukleonika 65(2):71-76, DOI 10.2478/nuka-2020-0010.
+# License (verbatim from p.71): "(c) 2020 C. Lucchetti et al. This is an open
+# access article distributed under the Creative Commons
+# Attribution-NonCommercial-NoDerivatives 3.0 License (CC BY-NC-ND 3.0)."
+# Table 3 (p.75) "Experimental equilibrium 222Rn and 220Rn and temperature in
+# the model room". Values transcribed VERBATIM; the condition_description
+# column is compiled from the narrative of each test in the text (pp.74-75),
+# since Table 3 itself labels experiments only by number.
+# Paper note under Table 3: "Uncertainties are quoted as standard deviation;
+# bdl is below detection limit." -> Rn220 = "bdl" with empty uncertainty.
+# Scale model room: inner 62 cm x 50 cm x 35 cm, walls of "Tufo di Gallese"
+# ignimbrite (abstract p.71).
+# Extraction route: the PDF tables could not be read from the web page (binary PDF);
+# PDF downloaded with curl from https://sciendo.com/pdf/10.2478/nuka-2020-0010
+# (301 redirect to reference-global.com followed by curl -L), text extracted
+# with system python3 + pypdf 6.14.2 (pypdf not present in project venv).
+# Units: Rn222/Rn220 equilibrium activity concentration in Bq/m3,
+# temperature range in degrees Celsius.
+experiment,condition_description,Rn222_eq_Bq_m3,Rn222_unc,Rn220_eq_Bq_m3,Rn220_unc,T_min_degC,T_max_degC
+1,"side walls not covered with plaster or other coating material (reference test)",770,50,523,203,18,24
+2,"side walls externally covered with a transparent film used to conserve food",10623,137,530,124,20,26
+3,"as test 2, plus inner walls covered with a radon-free plasterboard",13154,211,230,103,25,31
+4,"as test 3, plus a double coat of thermal insulation paint on the inner plasterboard",12145,227,bdl,,22,27
+5a,"as test 4, plus a waterproofing paint internally added over the thermal insulation paint",11400,155,bdl,,23,27
+5b,"as test 5a but outer plastic film removed (internal pervious shields only)",1040,71,bdl,,23,27

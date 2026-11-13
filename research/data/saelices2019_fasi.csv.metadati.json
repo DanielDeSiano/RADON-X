@@ -1,0 +1,37 @@
+{
+ "campi_del_mandato": {
+  "environmental_conditions": "Pearson correlations declared by the authors on closed periods: pressure -0.44, temperature +0.44, wind -0.59; sump pressure -55 Pa in phase 6",
+  "instrument": "Radon Scout / Radon Scout Home (SARAD) and AlphaE (Bertin), chamber-checked; passive detectors mostly saturated",
+  "licence": "arXiv preprint 2403.15392, freely distributed; the journal version is Elsevier",
+  "missing_values": "Ground floor not tabulated for phase 2; closed phases carry no per-phase concentration, only the pooled averages (54625 basement, 26421 ground floor).",
+  "sampling_frequency": "Continuous monitoring; the transcription carries per-phase values only - the hourly series exist only as figures",
+  "site": "Pilot house at Saelices el Chico (Salamanca, Spain), on the former ENUSA uranium site: soil Ra-226 about 1600 Bq/kg, outdoor radon about 300 Bq/m3",
+  "soil_properties": "Not sampled in this paper: Ra-226 cited from Frutos et al. 2011",
+  "split": "Exploratory until the project has a two-zone indoor model with depressurisation: nothing in the code can predict these phases today. First candidate for validating the building-entry ring on a real house, as data/INDOOR_CANDIDATI.md records.",
+  "timestamp": "June 2018 to April 2019, nine testing phases",
+  "units": "Concentration Bq/m3; extraction velocity m/s; reduction percent"
+ },
+ "colonne": [
+  "phase",
+  "description",
+  "vext_m_s",
+  "date_start",
+  "date_end",
+  "zone",
+  "c_rn_bq_m3",
+  "reduction_pct"
+ ],
+ "file": "saelices2019_fasi.csv",
+ "file_del_gruppo": [
+  "saelices2019_fasi.csv"
+ ],
+ "fonte_della_provenienza": "radon_x.data_manifest.MANIFEST",
+ "generato_da": "tools/genera_metadati_dati.py",
+ "impronta_sha256": "94759fd48e3096f1",
+ "n_righe": 14,
+ "note": "",
+ "provenienza_altrove": "",
+ "righe_di_testa_saltate": 45,
+ "ruolo": "solo-esplorativo",
+ "schema_version": "1.0"
+}

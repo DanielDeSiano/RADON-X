@@ -1,0 +1,47 @@
+{
+ "campi_del_mandato": {
+  "environmental_conditions": "Soil temperature min/mean/max per site",
+  "instrument": "Naturally ventilated accumulator, 0.28 per hour",
+  "licence": "Taylor & Francis, free access",
+  "missing_values": "Sites A, G and I carry the authors' own footnote 'confirmed as measuring problems' and are exploratory only.",
+  "sampling_frequency": "Four seasons per site",
+  "site": "Ten sites in Japan and Korea",
+  "soil_properties": "Ra-226, bulk density, total porosity, emanation power of oven-dried soil at 25 degC, saturation min/mean/max",
+  "split": "Validation on the seven sites without the authors' footnote. Sites A, G, I exploratory only, on the authors' own warning.",
+  "timestamp": "April 2003 to April 2004, seasonally averaged",
+  "units": "Ra-226 Bq/kg; density g/cm3; porosity and saturation dimensionless; temperature K; flux mBq/m2/s"
+ },
+ "colonne": [
+  "site",
+  "Ra226_Bq_kg",
+  "rho_b_g_cm3",
+  "total_porosity",
+  "eps0_at25C",
+  "S_avg",
+  "S_min",
+  "S_max",
+  "T_avg_K",
+  "T_min_K",
+  "T_max_K",
+  "J_meas_avg",
+  "J_meas_min",
+  "J_meas_max",
+  "J_Rogers",
+  "J_Schery",
+  "J_combined",
+  "footnote"
+ ],
+ "file": "zhuo2006_10sites.csv",
+ "file_del_gruppo": [
+  "zhuo2006_10sites.csv"
+ ],
+ "fonte_della_provenienza": "radon_x.data_manifest.MANIFEST",
+ "generato_da": "tools/genera_metadati_dati.py",
+ "impronta_sha256": "82defe983c4ffa0c",
+ "n_righe": 10,
+ "note": "",
+ "provenienza_altrove": "",
+ "righe_di_testa_saltate": 11,
+ "ruolo": "validazione",
+ "schema_version": "1.0"
+}

@@ -1,0 +1,53 @@
+{
+ "campi_del_mandato": {
+  "environmental_conditions": {
+   "che_cosa_cercare": "weather at the flux campaign, not published",
+   "stato": "fonte da trovare"
+  },
+  "instrument": {
+   "che_cosa_cercare": "accumulation chamber model, in Voltaggio 2006 §2",
+   "stato": "fonte da trovare"
+  },
+  "licence": "Springer subscription article (closed). The values are tabular data.",
+  "missing_values": {
+   "motivo": "tabulated values, complete as published: no gaps to declare",
+   "stato": "non applicabile"
+  },
+  "sampling_frequency": {
+   "che_cosa_cercare": "counting time per point, in Voltaggio 2006 §2",
+   "stato": "fonte da trovare"
+  },
+  "site": "Northern Lazio, Italy: six sites on three lithotypes (volcanic, epiclastic, Chiani-Tevere fluvio-lacustrine unit)",
+  "soil_properties": "Ra-226, laboratory emanation g, porosity, saturation at sampling, dry bulk density: all published per site",
+  "split": "Field validation. No row enters calibration.",
+  "timestamp": {
+   "che_cosa_cercare": "campaign dates, in Voltaggio 2006 §2",
+   "stato": "fonte da trovare"
+  },
+  "units": "Ra-226 Bq/kg; g dimensionless; porosity, saturation dimensionless; density kg/m3; flux Bq/m2/day"
+ },
+ "colonne": [
+  "site_id",
+  "lithology",
+  "Ra226_Bq_kg",
+  "g_emanation",
+  "porosity_phi",
+  "Rs_saturation_at_sampling",
+  "rho_bulk_kg_m3",
+  "J_Rn_measured_Bq_m2_day",
+  "J_Rne_estimated_Bq_m2_day"
+ ],
+ "file": "voltaggio2006_lazio_6siti.csv",
+ "file_del_gruppo": [
+  "voltaggio2006_lazio_6siti.csv"
+ ],
+ "fonte_della_provenienza": "radon_x.data_manifest.MANIFEST",
+ "generato_da": "tools/genera_metadati_dati.py",
+ "impronta_sha256": "f277cb763d532bd9",
+ "n_righe": 6,
+ "note": "g is a laboratory value and the source does not state whether the sample was oven-dried. The dry/plateau reading used in the validation documents is a hypothesis, not a datum.",
+ "provenienza_altrove": "",
+ "righe_di_testa_saltate": 36,
+ "ruolo": "validazione",
+ "schema_version": "1.0"
+}

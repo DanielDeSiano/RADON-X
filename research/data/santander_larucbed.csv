@@ -1,0 +1,43 @@
+# Grossi C. et al. (2023), Atmospheric Measurement Techniques 16:2655-2672,
+# DOI 10.5194/amt-16-2655-2023.
+# Licenza / accesso: open access (Copernicus, AMT). Dati associati su Zenodo,
+#   deposito 7331337. La licenza esatta del deposito Zenodo non e' verificata nei
+#   documenti di validazione -> needs-source.
+# Origine dei valori: descrizione del letto di esalazione di riferimento del
+#   laboratorio LaRUC (Universita' di Cantabria) e tabella dei tre metodi di
+#   determinazione del flusso; trascritti nel documento
+#   Validazione_Kobe_Santander_Bessines_v1, sezione 5.
+# Sito: banco metrologico indoor. Suolo di ex miniera d'uranio in vasca d'acciaio
+#   sigillata, spessore 0.165 m, geometria esatta e parametri con incertezze
+#   metrologiche. Non e' un sito di campo.
+# Strumento: misura primaria con enclosure sull'intera superficie; sistema Autoflux
+#   (58 misure indipendenti); piu' la formula teorica del paper stesso.
+# Periodo: non riportato nei documenti di validazione -> needs-source.
+# Formato: long / chiave-valore (un solo banco, piu' determinazioni di flusso).
+#
+# Unita' e tipo di ciascuna colonna:
+#   quantity      : nome della grandezza [-]
+#   value         : valore [unita' della colonna unit]; VUOTO = non pubblicato
+#   uncertainty   : incertezza come pubblicata [stessa unita']
+#   unit          : unita' di misura
+#   value_type    : misurato | calcolato_dagli_autori | assunto | non_pubblicato
+#   n_experiments : numero di misure indipendenti, dove dichiarato [-]
+#   notes         : condizioni e limitazioni
+#
+# NOTA sull'emanazione: eps0 = 0.18 +- 0.03 e' misurato a SECCO, e il letto E'
+#   quasi secco (saturazione 0.06-0.07, sotto il plateau di umidita'). Il valore e'
+#   quindi usabile cosi' com'e', senza correzione secco->plateau.
+# LIMITE DICHIARATO: letto quasi secco, quindi questo dataset non testa la
+#   dipendenza del flusso dall'umidita'.
+quantity,value,uncertainty,unit,value_type,n_experiments,notes
+Ra226,19130,350,Bq kg-1,misurato,,circa 700 volte l'attivita' di un suolo naturale
+emanation_coefficient_eps0,0.18,0.03,-,misurato,,misurato su campione essiccato
+total_porosity,0.3599,,-,misurato,,
+dry_bulk_density,1645,,kg m-3,misurato,,
+layer_thickness,0.165,,m,misurato,,strato su fondo d'acciaio sigillato
+water_saturation_min,0.06,,-,misurato,,il letto e' quasi secco
+water_saturation_max,0.07,,-,misurato,,il letto e' quasi secco
+temperature,298,,K,misurato,,temperatura dichiarata dal paper
+J_enclosure_primary,1757,67,mBq m-2 s-1,misurato,,misura primaria su tutta la superficie
+J_autoflux_system,1856,87,mBq m-2 s-1,misurato,58,sistema Autoflux
+J_theoretical_paper_formula,1918,278,mBq m-2 s-1,calcolato_dagli_autori,,"formula teorica del paper; gli autori riportano uno scarto teoria/misura di +9%"

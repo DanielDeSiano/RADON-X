@@ -1,0 +1,45 @@
+{
+ "campi_del_mandato": {
+  "environmental_conditions": "Field core with moisture over 13 sections",
+  "instrument": "Closed accumulation chamber 2.4 L for the prisms; core profiles",
+  "licence": "CC-BY with supplementary (Journal of Hazardous Materials 507:141754)",
+  "missing_values": "The prism rows carry an internal inconsistency of the source: the measured fluxes sit 29-36% BELOW the production ceiling computed with the paper's own emanation, which free exhalation cannot do. Both the measurement and the paper's own FEM refer to the closed-chamber experiment, where back-diffusion suppresses the net flux.",
+  "sampling_frequency": "Per experiment",
+  "site": "Huelva phosphogypsum stack: closed-chamber prisms (10 and 20 cm) and a field core over 88 cm",
+  "soil_properties": "Ra-226 669 Bq/kg, porosity 0.5, saturation 0.4, density 1210 kg/m3, emanation 0.15 (state not declared)",
+  "split": "Field row: validation. Prism rows: exploratory only, on the internal inconsistency above.",
+  "timestamp": "Castano-Casco et al. 2026",
+  "units": "Ra-226 Bq/kg; flux mBq/m2/s; depth cm"
+ },
+ "colonne": [
+  "configuration",
+  "setting",
+  "thickness_m",
+  "Ra226_Bq_kg",
+  "Ra226_unc",
+  "rho_bulk_kg_m3",
+  "porosity",
+  "water_saturation",
+  "water_saturation_unc",
+  "temperature_K",
+  "emanation_reported",
+  "n_chambers",
+  "E_measured_mBq_m2_s",
+  "E_measured_unc",
+  "E_RADEXH_authors_mBq_m2_s",
+  "production_ceiling_mBq_m2_s"
+ ],
+ "file": "huelva_prismi_e_campo.csv",
+ "file_del_gruppo": [
+  "huelva_prismi_e_campo.csv"
+ ],
+ "fonte_della_provenienza": "radon_x.data_manifest.MANIFEST",
+ "generato_da": "tools/genera_metadati_dati.py",
+ "impronta_sha256": "2e056882cdd85911",
+ "n_righe": 3,
+ "note": "",
+ "provenienza_altrove": "",
+ "righe_di_testa_saltate": 62,
+ "ruolo": "solo-esplorativo",
+ "schema_version": "1.0"
+}

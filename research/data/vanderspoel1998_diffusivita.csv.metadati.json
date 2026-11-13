@@ -1,0 +1,43 @@
+{
+ "campi_del_mandato": {
+  "environmental_conditions": "Controlled laboratory",
+  "instrument": "Laboratory diffusivity measurement, thesis chapter",
+  "licence": "Open institutional repository, attribution",
+  "missing_values": {
+   "motivo": "tabulated values, complete as published: no gaps to declare",
+   "stato": "non applicabile"
+  },
+  "sampling_frequency": {
+   "che_cosa_cercare": "per-experiment counting time, in the thesis",
+   "stato": "fonte da trovare"
+  },
+  "site": "Laboratory sand column, TU Eindhoven doctoral thesis",
+  "soil_properties": "Porosity, saturation and density of the sand published",
+  "split": "BLOCKED TEST. It is the only source that constrains the diffusivity law directly rather than through a flux.",
+  "timestamp": "Thesis 1998",
+  "units": "Diffusivity m2/s; porosity and saturation dimensionless"
+ },
+ "colonne": [
+  "quantity",
+  "state",
+  "water_saturation",
+  "value",
+  "uncertainty",
+  "unit",
+  "value_type",
+  "notes"
+ ],
+ "file": "vanderspoel1998_diffusivita.csv",
+ "file_del_gruppo": [
+  "vanderspoel1998_diffusivita.csv"
+ ],
+ "fonte_della_provenienza": "radon_x.data_manifest.MANIFEST",
+ "generato_da": "tools/genera_metadati_dati.py",
+ "impronta_sha256": "f1e6ea3b5900eef1",
+ "n_righe": 6,
+ "note": "",
+ "provenienza_altrove": "",
+ "righe_di_testa_saltate": 34,
+ "ruolo": "test-bloccato",
+ "schema_version": "1.0"
+}

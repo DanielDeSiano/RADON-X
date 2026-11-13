@@ -1,0 +1,39 @@
+{
+ "campi_del_mandato": {
+  "environmental_conditions": "Controlled laboratory",
+  "instrument": "Three independent measurement methods; metrological uncertainties",
+  "licence": "Open access, data on Zenodo",
+  "missing_values": {
+   "motivo": "tabulated values, complete as published: no gaps to declare",
+   "stato": "non applicabile"
+  },
+  "sampling_frequency": "Per experiment, in the paper",
+  "site": "LaRUC reference exhalation bed, Universidad de Cantabria, Santander: uraniferous soil in a sealed steel tray, thickness 0.165 m",
+  "soil_properties": "Ra-226 19130+-350 Bq/kg; geometry known with metrological uncertainty. Porosity and density not tabulated here.",
+  "split": "BLOCKED TEST. Sealed geometry with declared uncertainty: a discrepancy is attributable to the model. Must stay untouched by tuning.",
+  "timestamp": "Published 2023 (Grossi et al., AMT)",
+  "units": "Ra-226 Bq/kg; flux mBq/m2/s; thickness m"
+ },
+ "colonne": [
+  "quantity",
+  "value",
+  "uncertainty",
+  "unit",
+  "value_type",
+  "n_experiments",
+  "notes"
+ ],
+ "file": "santander_larucbed.csv",
+ "file_del_gruppo": [
+  "santander_larucbed.csv"
+ ],
+ "fonte_della_provenienza": "radon_x.data_manifest.MANIFEST",
+ "generato_da": "tools/genera_metadati_dati.py",
+ "impronta_sha256": "98a63123df6ec5a0",
+ "n_righe": 11,
+ "note": "Affected by the Crank-Nicolson defect of audit section 25 until it was fixed: the corrected model/measurement ratio is 1.11 against the primary measurement, not the 0.97 the bug flattered.",
+ "provenienza_altrove": "",
+ "righe_di_testa_saltate": 31,
+ "ruolo": "test-bloccato",
+ "schema_version": "1.0"
+}

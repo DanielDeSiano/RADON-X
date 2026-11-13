@@ -1,0 +1,34 @@
+# Hosoda M., Shimo M., Sugino M., Furukawa M., Fukushi M. (2007)
+# "Effect of Soil Moisture Content on Radon and Thoron Exhalation"
+# J. Nucl. Sci. Technol. 44(4):664-672, DOI 10.1080/18811248.2007.9711855
+# Source: Fig. 6(a), p.670 (identical points also in Fig. 3, p.667).
+# Values obtained by EXACT vector-geometry extraction of the PDF figure
+# (pdf.js operator list -> marker centroids -> linear axis calibration on the
+# printed plot frame: x 0-25 %, left y 0-20 mBq m-2 s-1, right y 0-80 mBq m-2 s-1).
+# Self-check: measured/calculated = 0.23-0.25 at every point, matching the paper's
+# own statement "the measured radon exhalation rate was approximately 25% of the
+# calculated one". Measured values land exactly on 0.1 mBq m-2 s-1 gridpoints.
+#
+# Material: weathered granite soil, central Ibaraki Prefecture, Japan.
+# Ra-226 = 57.0 Bq/kg ; Ra-224 = 55.8 Bq/kg (HPGe, 80000 s)
+# dry bulk density rho_b = 1730 kg/m3 (1.7e3) ; grain density = 2.5e3 kg/m3
+# porosity eps = 0.30 ; layer thickness 50 mm ; area 275 x 210 mm
+# emanation coefficient NOT measured here: read off Strong & Levins (1982)
+#   graph vs moisture -> f = 0.079-0.28
+# D_e (from Rogers-Nielson eq.) = 3.0e-6 to 5.6e-8 m2/s over the moisture range
+# moisture_content is in % (mass basis; paper states range 3.5-30%)
+#
+# E_Rn_calculated is the paper's own calculated curve (Eq. 4 with Rogers-Nielson D_e),
+# linearly interpolated from the extracted Fig. 6(a) polyline at each measured moisture.
+# ratio_meas_over_calc: mean 0.246 -> reproduces the paper's "approximately 25%" statement.
+moisture_content_pct,E_Rn_measured_mBq_m2_s,E_Rn_meas_errbar_low,E_Rn_meas_errbar_high,E_Rn_calculated_mBq_m2_s,ratio_meas_over_calc
+3.59,11.4,6.4,16.4,46.30,0.246
+5.89,13.9,8.54,19.26,53.47,0.260
+7.52,13.2,8.2,18.2,53.41,0.247
+11.03,10.7,6.41,14.98,46.87,0.228
+13.59,10.0,6.1,13.9,40.05,0.250
+16.30,9.3,5.7,12.9,32.51,0.286
+18.03,6.4,3.5,9.3,26.84,0.238
+19.56,4.6,2.5,6.7,21.00,0.219
+21.09,2.5,0.36,4.64,12.47,0.200
+22.27,1.4,-0.03,2.83,4.90,0.286

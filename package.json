@@ -1,0 +1,7 @@
+{
+  "name": "radon-x-vercel",
+  "private": true,
+  "type": "module",
+  "scripts": {"build": "node build.mjs"},
+  "dependencies": {"pyodide": "0.27.7", "gsap": "3.13.0"}
+}

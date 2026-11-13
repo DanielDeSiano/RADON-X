@@ -1,0 +1,38 @@
+# Lucchetti C., Galli G., Tuccimei P. (2022) "Indoor/outdoor air exchange
+# affects indoor radon - the use of a scale model room to develop a mitigation
+# strategy", Advances in Geosciences 57:81-88, DOI 10.5194/adgeo-57-81-2022.
+# License (verbatim from p.81): "(c) Author(s) 2022. This work is distributed
+# under the Creative Commons Attribution 4.0 License." (CC BY 4.0)
+# Table 2 (p.85) "Relative change of Indoor Radon (RIR) in the model room with
+# and without the plasterboard inner covers in a series of experiments where
+# outdoor air was introduced in the model room or indoor air was extracted from
+# the model room at different air flow and air exchange (ACH) rates".
+# Transcribed VERBATIM. Signs as in the paper: negative air flow / ACH =
+# extraction of indoor air, positive = introduction of outdoor air.
+# RIR = (Rn_air_ventilation - Rn_no_ventilation)/Rn_no_ventilation x 100
+# (definition from Fig. 3 caption, p.86); RIR uncertainties are the
+# parenthesised plus/minus values of Table 2.
+# inner_cover = yes: inner walls coated with plasterboard (groups 1-2);
+# inner_cover = no: plasterboard removed (groups 3-4).
+# NOTE (declared discrepancy internal to the paper): the text on p.84 says
+# "experiment 6, RIR of -33.2" for the no-cover air-in test at 0.82 L/min,
+# but in Table 2 that value belongs to experiment 9 (group 3); experiment 6
+# (group 2) has RIR -25.0. Table 2 is transcribed as authoritative.
+# Extraction route: the first fetch returned the raw PDF binary (unreadable); PDF
+# downloaded with curl from
+# https://adgeo.copernicus.org/articles/57/81/2022/adgeo-57-81-2022.pdf,
+# text extracted with system python3 + pypdf 6.14.2 (pypdf not in project venv).
+# Units: air flow in L/min, ACH in 1/h, RIR and its uncertainty in %.
+experiment,group,inner_cover,mode,airflow_L_min,ACH_h,RIR_pct,RIR_unc_pct
+1,1,yes,air_in,0.82,0.49,-89.5,4.2
+2,1,yes,air_in,0.64,0.38,-88.8,4.3
+3,1,yes,air_in,0.5,0.30,-82.7,3.5
+4,1,yes,air_in,0.3,0.18,-75.6,4.4
+5,1,yes,air_in,0.15,0.09,-63.8,4.8
+6,2,yes,air_out,-0.82,-0.49,-25.0,5.7
+7,2,yes,air_out,-0.5,-0.30,-22.4,2.5
+8,2,yes,air_out,-0.15,-0.09,-4.7,4.7
+9,3,no,air_in,0.82,0.49,-33.2,3.8
+10,3,no,air_in,0.5,0.30,-26.4,2.3
+11,4,no,air_out,-0.82,-0.49,-26.6,3.7
+12,4,no,air_out,-0.5,-0.30,-24.8,2.7
